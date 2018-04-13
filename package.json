@@ -4,6 +4,7 @@
   "description": "The ultimate oppressive style guide.",
   "scripts": {
     "commitmsg": "commitlint -e $GIT_PARAMS",
+    "lint": "tslint -c tslint.json -p . --type-check",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Team Fraxes",
