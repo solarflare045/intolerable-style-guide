@@ -1,0 +1,25 @@
+{
+  "name": "intolerable-style-guide",
+  "version": "1.0.0",
+  "description": "The ultimate oppressive style guide.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Team Fraxes",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/solarflare045/intolerable-style-guide.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "tslint-eslint-rules": "^5.1.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.0.0",
+    "typescript": "^2.2.0"
+  },
+  "peerDependencies": {
+    "tslint": "^5.0.0",
+    "typescript": "^2.2.0"
+  }
+}
