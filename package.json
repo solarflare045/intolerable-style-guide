@@ -1,6 +1,6 @@
 {
   "name": "intolerable-style-guide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The ultimate oppressive style guide.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git://github.com/solarflare045/intolerable-style-guide.git"
   },
+  "main": "./tslint.json",
   "license": "ISC",
   "dependencies": {
     "tslint-eslint-rules": "^5.1.0"
