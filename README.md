@@ -1,6 +1,8 @@
-# intolerable-style-guide
+# intolerable-style-guide [![npm version](https://badge.fury.io/js/intolerable-style-guide.svg)](https://www.npmjs.com/package/intolerable-style-guide)
 
 *If your linter isn't constantly yelling at you, it isn't strict enough.*
+
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 ## Installation
 
