@@ -21,6 +21,7 @@
     "no-extra-boolean-cast": [true],
     "no-extra-semi": [true],
     "no-floating-promises": [true, "Promise", "JQueryPromise", "Q", "Bluebird"],
+    "no-implicit-dependencies": true,
     "no-inferred-empty-object-type": true,
     "no-magic-numbers": true,
     "no-multi-spaces": true,
