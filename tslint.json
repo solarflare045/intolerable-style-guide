@@ -5,6 +5,7 @@
   "rules": {
     "array-bracket-spacing": [true, "always", { "objectsInArrays": false, "arraysInArrays": false }],
     "await-promise": [true, "Promise", "JQueryPromise", "Q", "Bluebird"],
+    "ban-comma-operator": true,
     "block-spacing": [true, "always"],
     "brace-style": [true, "1tbs"],
     "curly": true,
