@@ -26,6 +26,7 @@
     "no-inferred-empty-object-type": true,
     "no-magic-numbers": true,
     "no-multi-spaces": true,
+    "no-object-literal-type-assertion": true,
     "no-return-await": true,
     "no-shadowed-variable": true,
     "no-string-throw": true,
