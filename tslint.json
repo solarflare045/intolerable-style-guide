@@ -34,6 +34,7 @@
     "no-unused-variable": [true],
     "no-use-before-declare": true,
     "no-var-keyword": true,
+    "no-var-requires": true,
     "object-curly-spacing": [true, "always"],
     "object-literal-shorthand": true,
     "object-literal-key-quotes": [true, "as-needed"],
