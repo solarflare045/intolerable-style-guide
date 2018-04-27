@@ -24,7 +24,6 @@
     "no-floating-promises": [true, "Promise", "JQueryPromise", "Q", "Bluebird"],
     "no-implicit-dependencies": true,
     "no-inferred-empty-object-type": true,
-    "no-magic-numbers": true,
     "no-multi-spaces": true,
     "no-object-literal-type-assertion": true,
     "no-return-await": true,
@@ -54,6 +53,8 @@
     "use-isnan": true,
     "variable-name": [true, "check-format", "allow-leading-underscore"],
     "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-module", "check-separator", "check-rest-spread", "check-type", "check-type-operator", "check-preblock"],
+
+    "no-magic-numbers": { "severity": "warning" },
 
     "completed-docs": { "severity": "warning", "options": {
       "classes": { "visibilities": "exported" },
