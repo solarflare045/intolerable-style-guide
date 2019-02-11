@@ -28,7 +28,7 @@ It is also recommended to manually add a linting script to your `package.json`, 
 ```
 "scripts": {
   ...
-  "lint": "tslint -c tsconfig.json -p ."
+  "lint": "tslint -p . -c tslint.json"
 }
 ```
 
