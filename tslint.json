@@ -10,7 +10,6 @@
     "brace-style": [true, "1tbs"],
     "curly": true,
     "eofline": true,
-    "import-blacklist": [true, "rxjs", "rxjs/Rx"],
     "indent": [true, "spaces", 2],
     "newline-per-chained-call": true,
     "no-conditional-assignment": true,
