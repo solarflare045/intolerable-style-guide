@@ -4,7 +4,7 @@
   ],
   "rules": {
     "array-bracket-spacing": [true, "always", { "objectsInArrays": false, "arraysInArrays": false }],
-    "await-promise": [true, "Promise", "JQueryPromise", "Q", "Bluebird", "PromiseLike"],
+    "await-promise": [true, "Promise", "JQueryPromise", "Q", "Bluebird", "PromiseLike", "RequestPromise"],
     "ban-comma-operator": true,
     "block-spacing": [true, "always"],
     "brace-style": [true, "1tbs"],
@@ -20,7 +20,7 @@
     "no-ex-assign": [true],
     "no-extra-boolean-cast": [true],
     "no-extra-semi": [true],
-    "no-floating-promises": [true, "Promise", "JQueryPromise", "Q", "Bluebird", "PromiseLike"],
+    "no-floating-promises": [true, "Promise", "JQueryPromise", "Q", "Bluebird", "PromiseLike", "RequestPromise"],
     "no-implicit-dependencies": true,
     "no-inferred-empty-object-type": true,
     "no-multi-spaces": true,
