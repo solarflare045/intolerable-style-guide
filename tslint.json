@@ -31,8 +31,6 @@
     "no-trailing-whitespace": true,
     "no-unexpected-multiline": [true],
     "no-unused-expression": true,
-    "no-unused-variable": [true],
-    "no-use-before-declare": true,
     "no-var-keyword": true,
     "no-var-requires": true,
     "object-curly-spacing": [true, "always"],
