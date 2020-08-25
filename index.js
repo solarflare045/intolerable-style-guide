@@ -29,10 +29,7 @@ module.exports = {
       "error",
       { allowExpressions: true, allowTypedFunctionExpressions: true },
     ],
-    "no-use-before-define": [
-      "error",
-      { functions: false, classes: true, variables: true },
-    ],
+    "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": [
       "error",
       { functions: false, classes: true, variables: true, typedefs: true },
@@ -57,5 +54,12 @@ module.exports = {
     'class-methods-use-this': "warn",
     "promise/prefer-await-to-then": "error",
     "promise/prefer-await-to-callbacks": "warn",
+    "@typescript-eslint/consistent-type-assertions": ["error", { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow-as-parameter' }],
+    'sonarjs/cognitive-complexity': ['warn', 25],
+    'eqeqeq': ['error', 'smart'],
+    "@typescript-eslint/no-magic-numbers": ["warn", {ignoreEnums: true, ignoreNumericLiteralTypes: true, ignoreReadonlyClassProperties: true}],
+    "@typescript-eslint/naming-convention": "error", //airbnb allow PascalCase in some situations that are mostly type aware. so change back the default
+    "@typescript-eslint/no-empty-function": ["warn", {allow: ['decoratedFunctions', 'private-constructors', 'protected-constructors']}],
+    "import/no-deprecated": "warn",
   }
 }
