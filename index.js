@@ -1,65 +1,84 @@
+const {
+  rules: baseStyleRules,
+} = require('eslint-config-airbnb-base/rules/style');
+
 module.exports = {
   plugins: [
-    "@typescript-eslint",
-    "array-func",
-    "promise",
-    "eslint-comments",
-    "unicorn",
-    "sonarjs",
-    "security",
+    '@typescript-eslint',
+    'array-func',
+    'promise',
+    'eslint-comments',
+    'unicorn',
+    'sonarjs',
+    'security',
   ],
+  parserOptions: {
+    project: './tsconfig.json', // this is only really for local testing. the extending projects will override this
+  },
   extends: [
-    "airbnb-typescript/base",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:array-func/all",
-    "plugin:promise/recommended",
-    "plugin:eslint-comments/recommended",
-    "plugin:unicorn/recommended",
-    "plugin:sonarjs/recommended",
-    "plugin:security/recommended",
-    "prettier", //last so it wins over every other plugin
-    "prettier/@typescript-eslint",
-    "prettier/unicorn",
+    'airbnb-typescript/base', //start with airbnb, which has thought through a bunch of minutiae
+    'plugin:@typescript-eslint/recommended', // add some of the basic typescript rules
+    'plugin:@typescript-eslint/recommended-requiring-type-checking', // add some cooler typescipt rules
+    'plugin:array-func/all', // ensure the correct use of the Array functions
+    'plugin:promise/recommended', // use promises as well as possible
+    'plugin:eslint-comments/recommended', // these are meta rules about eslint configing itself. don't be silly, basically
+    'plugin:unicorn/recommended', // unicorn have added many rules about improving the readability of code related to the fun stuff es6+ gives us
+    'plugin:sonarjs/recommended', // security audit rules that might help us see very damaging bugs
+    'plugin:security/recommended', // more security audit rules
+    'prettier', //last so it wins over every other plugin. disables formatting issues that prettier will handle itself
+    'prettier/@typescript-eslint',
+    'prettier/unicorn',
   ],
   rules: {
-    "no-prototype-builtins": "off",
-    "import/prefer-default-export": "off",
-    "@typescript-eslint/explicit-function-return-type": [
-      "error",
+    'no-prototype-builtins': 'off', // typescript saves the day here (unless there are security concerns)
+    'import/prefer-default-export': 'off', // this blows, and is probably bad
+    '@typescript-eslint/explicit-function-return-type': [
+      // makes sure we are returning the expected type from a function. small functions are ok
+      'error',
       { allowExpressions: true, allowTypedFunctionExpressions: true },
     ],
-    "no-use-before-define": "off",
-    "@typescript-eslint/no-use-before-define": [
-      "error",
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': [
+      // just adding the types
+      'error',
       { functions: false, classes: true, variables: true, typedefs: true },
     ],
-    "no-console": "off",
-    "spaced-comment": "off",
-    'no-restricted-syntax': [
+    'no-console': 'off', // what's wrong with console? even in a browser, logging to console is probably fine
+    'spaced-comment': 'off', // this adds readability, i guess? but I don't see it as essential
+    'no-restricted-syntax': baseStyleRules['no-restricted-syntax'].filter(
+      (value) => value.selector !== 'ForOfStatement',
+    ), // airbnb has banned for..of, even though for..of rules. This just removes that.
+    'class-methods-use-this': 'warn', // i can see why airbnb wants this, but the performance difference between static and instance methods is not worth an error
+    'promise/prefer-await-to-then': 'error', // why aren't you using await? typescipt transpile means it is always available
+    'promise/prefer-await-to-callbacks': 'warn', // callbacks can be painful to convert to promises to convert to await, but you should try
+    '@typescript-eslint/consistent-type-assertions': [
       'error',
       {
-        selector: 'ForInStatement',
-        message: 'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
+        assertionStyle: 'as',
+        objectLiteralTypeAssertions: 'allow-as-parameter',
       },
+    ], // don't really care about the assertion style, is is more about enforcing that object literal
+    'sonarjs/cognitive-complexity': ['warn', 25], // this might indicate bad code, but we can trust the dev to know if it is an error or not
+    eqeqeq: ['error', 'smart'], // some things only == null and not === null
+    '@typescript-eslint/no-magic-numbers': [
+      'warn',
       {
-        selector: 'LabeledStatement',
-        message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+        ignoreEnums: true,
+        ignoreNumericLiteralTypes: true,
+        ignoreReadonlyClassProperties: true,
       },
+    ], // magic numbers are bad, but also it doesn't matter
+    '@typescript-eslint/naming-convention': 'error', //airbnb allow PascalCase in some situations that are mostly type aware. so change back the default
+    '@typescript-eslint/no-empty-function': [
+      'warn',
       {
-        selector: 'WithStatement',
-        message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+        allow: [
+          'decoratedFunctions',
+          'private-constructors',
+          'protected-constructors',
+        ],
       },
-    ],
-    'class-methods-use-this': "warn",
-    "promise/prefer-await-to-then": "error",
-    "promise/prefer-await-to-callbacks": "warn",
-    "@typescript-eslint/consistent-type-assertions": ["error", { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow-as-parameter' }],
-    'sonarjs/cognitive-complexity': ['warn', 25],
-    'eqeqeq': ['error', 'smart'],
-    "@typescript-eslint/no-magic-numbers": ["warn", {ignoreEnums: true, ignoreNumericLiteralTypes: true, ignoreReadonlyClassProperties: true}],
-    "@typescript-eslint/naming-convention": "error", //airbnb allow PascalCase in some situations that are mostly type aware. so change back the default
-    "@typescript-eslint/no-empty-function": ["warn", {allow: ['decoratedFunctions', 'private-constructors', 'protected-constructors']}],
-    "import/no-deprecated": "warn",
-  }
-}
+    ], // did you forget to write your function?
+    'import/no-deprecated': 'warn', // dont use old code
+  },
+};

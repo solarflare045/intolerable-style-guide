@@ -4,7 +4,7 @@
   "description": "The ultimate oppressive style guide.",
   "scripts": {
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "lint": "tslint -c tslint.json -p .",
+    "lint": "eslint -c index.js test/example.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "version": "standard-version"
   },
