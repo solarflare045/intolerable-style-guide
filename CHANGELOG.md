@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/solarflare045/intolerable-style-guide/compare/v1.3.0...v2.0.0) (2020-08-25)
+
+
+### Bug Fixes
+
+* remove node config that was broken and uneeded ([2540186](https://github.com/solarflare045/intolerable-style-guide/commit/2540186))
+
+
+### Features
+
+* add support for warning about lodash being unneeded ([1a4171a](https://github.com/solarflare045/intolerable-style-guide/commit/1a4171a))
+* allow awaits in loops ([a48aa77](https://github.com/solarflare045/intolerable-style-guide/commit/a48aa77))
+* have prettier run through eslint ([63ffc30](https://github.com/solarflare045/intolerable-style-guide/commit/63ffc30))
+
+
+* feat!: introduce new eslint config to replace the tslint one ([0e90aa4](https://github.com/solarflare045/intolerable-style-guide/commit/0e90aa4))
+
+
+### BREAKING CHANGES
+
+* everything is different now
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/solarflare045/intolerable-style-guide/compare/v1.2.3...v1.3.0) (2019-10-18)
 

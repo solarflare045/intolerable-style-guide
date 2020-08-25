@@ -6,37 +6,48 @@
 
 ## Installation
 
-You can install **`intolerable-style-guide`** using npm via
+You can install **`eslint-config-intolerable-style-guide`** using npm via
 ```
-npm install -D intolerable-style-guide
+npm install -D eslint-config-intolerable-style-guide eslint prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-array-func eslint-plugin-eslint-comments eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise eslint-plugin-security eslint-plugin-sonarjs eslint-plugin-unicorn eslint-plugin-you-dont-need-lodash-underscore
 ```
 
-You will also need to install appropriate versions of **`tslint`** and friends. Just look out for the peerDependency warnings you get as you install this package.
+This is a lot, but eslint uses peer dependencies, so it the best we can do. If you miss any, npm will warn you.
 
 ## Configuration
 
-Once you have installed this package, you will need to setup your `tslint.json` in the root of your project. Just copy in:
-
+If you look in the `example-project` folder, it will have the files you need.
+They are all optional except for `.eslintrc.yml`. At a minimum, that will need to be:
+```yml
+extends:
+  - intolerable-style-guide
+parserOptions:
+  project: ./tsconfig.json
+root: true
 ```
-{
-  "extends": "intolerable-style-guide"
-}
-```
+The `.eslintignore` file is a gitignore style file to tell the linter what folders not to look at.
+The `.prettierrc` and `.prettierignore` files will tell your IDE how to do formatting if you use the prettier plugin for it. If you just want eslint to fix those, you can leave it out.
 
 It is also recommended to manually add a linting script to your `package.json`, which should look like this:
 
-```
+```json
 "scripts": {
   ...
-  "lint": "tslint -p . -c tslint.json"
+  "lint": "eslint ."
 }
 ```
 
 This will allow you to run:
-```
+```bash
 npm run lint
+```
+
+You could also consider running [lint-staged](https://github.com/okonet/lint-staged) to add some githooks to check the code before commit.
+```json
+"lint-staged": {
+  "*.ts": "eslint"
+}
 ```
 
 ## Querks
 
-Some of the rules require type-checking, which is disabled when Visual Studio Code runs its linting tool (due to performance reasons.) Because of this, rules like `await-promise` won't work until you call the linter from the console.
+None. It is perfect.

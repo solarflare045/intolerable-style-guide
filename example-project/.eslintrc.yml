@@ -1,0 +1,12 @@
+extends:
+  - intolerable-style-guide
+  - intolerable-style-guide/jest # if it is a jest project
+parserOptions:
+  project: ./tsconfig.json # the rules need to know what the typescript to compile is (this can also be a list or glob)
+root: true
+overrides:
+  - files: # new rules, maybe
+    - src/migration/*.ts
+    rules:
+      unicorn/filename-case: "off"
+      class-methods-use-this: "off"
