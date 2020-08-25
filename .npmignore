@@ -1,3 +1,7 @@
 test/
 
 .commitlintrc.yml
+.node-version
+tsconfig.json
+.vscode
+example-project/
