@@ -12,6 +12,7 @@ module.exports = {
     'sonarjs',
     'security',
     'you-dont-need-lodash-underscore',
+    'prettier',
   ],
   parserOptions: {
     project: './tsconfig.json', // this is only really for local testing. the extending projects will override this
@@ -32,6 +33,14 @@ module.exports = {
     'prettier/unicorn',
   ],
   rules: {
+    'prettier/prettier': [ // have prettier yell at you through eslint
+      'error',
+      { // we could load the defaults from the file, but whatever
+        trailingComma: 'all', // typescipt is great at trailing commas
+        singleQuote: true,  // this is arbitrary and we already arbitraried it one way
+        endOfLine: 'auto', // git takes care of this for us, never had line ending issues
+      },
+    ],
     'no-prototype-builtins': 'off', // typescript saves the day here (unless there are security concerns)
     'import/prefer-default-export': 'off', // this blows, and is probably bad
     '@typescript-eslint/explicit-function-return-type': [
