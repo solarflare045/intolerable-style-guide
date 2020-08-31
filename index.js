@@ -1,7 +1,15 @@
 const {
   rules: baseStyleRules,
 } = require('eslint-config-airbnb-base/rules/style');
+const versionSatisfies = require('semver/functions/satisfies');
 
+function getTypescriptVersion() {
+  try {
+    const typescript = require('typescript');
+    return typescript.version
+  } catch (_e) {}
+  return null;
+}
 module.exports = {
   plugins: [
     '@typescript-eslint',
@@ -96,3 +104,7 @@ module.exports = {
     'unicorn/no-null': 'off', // null is our chosen bottom value
   },
 };
+const typescriptVersion = getTypescriptVersion();
+if (typescriptVersion && versionSatisfies(typescriptVersion, "<3.8")) {
+  module.exports.rules['import/no-cycle'] = 'off'; // if it is an old version of ts, we can't import only types. So disable this for those situations.
+}
