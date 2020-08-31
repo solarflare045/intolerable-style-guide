@@ -112,6 +112,7 @@ module.exports = {
     'no-void': ['error', {
       allowAsStatement: true,
     }],
+    'global-require': 'off', // handled by import stuff and no-var-require
   },
 };
 const typescriptVersion = getTypescriptVersion();
