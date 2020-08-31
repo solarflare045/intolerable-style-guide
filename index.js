@@ -44,6 +44,7 @@ module.exports = {
     'prettier/prettier': [ // have prettier yell at you through eslint
       'error',
       { // we could load the defaults from the file, but whatever
+        printWidth: 120, // 80 is ridiculous, even for prettier's vibe line length system
         trailingComma: 'all', // typescipt is great at trailing commas
         singleQuote: true,  // this is arbitrary and we already arbitraried it one way
         endOfLine: 'auto', // git takes care of this for us, never had line ending issues
