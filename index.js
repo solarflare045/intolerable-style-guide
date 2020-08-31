@@ -103,6 +103,9 @@ module.exports = {
     'no-await-in-loop': 'warn', // sometimes you want to do some network calls synchronously.
     'no-undefined': 'warn', // we chose null as the bottom value, but sometimes ya just gotta use undefined
     'unicorn/no-null': 'off', // null is our chosen bottom value
+    'no-underscore-dangle': ['warn', { // these are a fun way to indicate private members
+      allowAfterThis: true
+    }]
   },
 };
 const typescriptVersion = getTypescriptVersion();
