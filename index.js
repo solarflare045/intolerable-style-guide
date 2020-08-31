@@ -109,6 +109,9 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': ['error', {
       allowExpressions: true,
     }],
+    'no-void': ['error', {
+      allowAsStatement: true,
+    }],
   },
 };
 const typescriptVersion = getTypescriptVersion();
