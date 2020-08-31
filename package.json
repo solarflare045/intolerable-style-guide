@@ -3,7 +3,6 @@
   "version": "2.0.0",
   "description": "The ultimate oppressive style guide.",
   "scripts": {
-    "commitmsg": "commitlint -e $GIT_PARAMS",
     "lint": "eslint -c index.js test/example.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "version": "standard-version"
@@ -37,12 +36,17 @@
     "@commitlint/config-conventional": "^9.1.2",
     "eslint": "^7.7.0",
     "eslint-find-rules": "^3.6.0",
-    "husky": "^0.14.3",
-    "standard-version": "^4.3.0",
+    "husky": "^4.2.5",
+    "standard-version": "^9.0.0",
     "typescript": "^3.9.7"
   },
   "peerDependencies": {
     "eslint": ">=7.7.0",
     "typescript": "*"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
