@@ -104,8 +104,11 @@ module.exports = {
     'no-undefined': 'warn', // we chose null as the bottom value, but sometimes ya just gotta use undefined
     'unicorn/no-null': 'off', // null is our chosen bottom value
     'no-underscore-dangle': ['warn', { // these are a fun way to indicate private members
-      allowAfterThis: true
-    }]
+      allowAfterThis: true,
+    }],
+    '@typescript-eslint/explicit-function-return-type': ['error', {
+      allowExpressions: true,
+    }],
   },
 };
 const typescriptVersion = getTypescriptVersion();
