@@ -68,7 +68,7 @@ module.exports = {
     'no-restricted-syntax': baseStyleRules['no-restricted-syntax'].filter(
       (value) => value.selector !== 'ForOfStatement',
     ), // airbnb has banned for..of, even though for..of rules. This just removes that.
-    'class-methods-use-this': 'warn', // i can see why airbnb wants this, but the performance difference between static and instance methods is not worth an error
+    'class-methods-use-this': 'off', // i can see why airbnb wants this, but the performance difference between static and instance methods is not worth it
     'promise/prefer-await-to-then': 'error', // why aren't you using await? typescipt transpile means it is always available
     'promise/prefer-await-to-callbacks': 'warn', // callbacks can be painful to convert to promises to convert to await, but you should try
     '@typescript-eslint/consistent-type-assertions': [
