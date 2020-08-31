@@ -92,5 +92,7 @@ module.exports = {
     ], // did you forget to write your function?
     'import/no-deprecated': 'warn', // dont use old code
     'no-await-in-loop': 'warn', // sometimes you want to do some network calls synchronously.
+    'no-undefined': 'warn', // we chose null as the bottom value, but sometimes ya just gotta use undefined
+    'unicorn/no-null': 'off', // null is our chosen bottom value
   },
 };
