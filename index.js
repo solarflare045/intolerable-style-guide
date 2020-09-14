@@ -120,6 +120,14 @@ module.exports = {
     '@typescript-eslint/no-unsafe-assignment': 'warn',
     '@typescript-eslint/no-unsafe-return': 'warn',
     '@typescript-eslint/no-unsafe-call': 'warn',
+    'unicorn/filename-case': [ // We use kebab for normal stuff, and Pascal for classes
+      'error', {
+        'cases': {
+          'kebabCase': true,
+          'pascalCase': true
+        },
+      },
+    ],
   },
 };
 const typescriptVersion = getTypescriptVersion();
