@@ -113,6 +113,10 @@ module.exports = {
       allowAsStatement: true,
     }],
     'global-require': 'off', // handled by import stuff and no-var-require
+    '@typescript-eslint/no-unsafe-member-access': 'warn', // All these no-unsafe rules are great, but 'any' creeps in in just too many palces
+    '@typescript-eslint/no-unsafe-assignment': 'warn',
+    '@typescript-eslint/no-unsafe-return': 'warn',
+    '@typescript-eslint/no-unsafe-call': 'warn',
   },
 };
 const typescriptVersion = getTypescriptVersion();
