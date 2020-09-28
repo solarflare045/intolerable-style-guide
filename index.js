@@ -151,7 +151,7 @@ module.exports = {
       },
     },
     {
-      files: '**/*.test.*',
+      files: ['**/*.test.*', '**/*.spec.*'],
       rules: {
         'sonarjs/no-duplicate-string': 'off', // we duplicate strings in tests all the time and they shouldn't be the same instance in tests for isolation
         'sonarjs/no-identical-functions': 'off', // tests are often bad bad on purpose
