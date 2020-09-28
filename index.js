@@ -137,6 +137,7 @@ module.exports = {
       },
     ],
     'array-func/prefer-array-from': 'off', // this lost in the war with unicorn/prefer-spread
+    'no-param-reassign': ['error', { props: false }], // totes legit to modify the props of an input
   },
   overrides: [
     {
