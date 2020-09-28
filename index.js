@@ -1,4 +1,5 @@
 const { rules: baseStyleRules } = require('eslint-config-airbnb-base/rules/style');
+const { rules: baseImportRules } = require('eslint-config-airbnb-base/rules/imports');
 const versionSatisfies = require('semver/functions/satisfies');
 
 function getTypescriptVersion() {
@@ -138,6 +139,18 @@ module.exports = {
     ],
     'array-func/prefer-array-from': 'off', // this lost in the war with unicorn/prefer-spread
     'no-param-reassign': ['error', { props: false }], // totes legit to modify the props of an input
+    'import/no-extraneous-dependencies': baseImportRules['import/no-extraneous-dependencies'].map((rule) => {
+      if (Array.isArray(rule.devDependencies)) {
+        rule.devDependencies.push('/e2e/**'); // angular uses this folder pattern for end to end tests
+      }
+      return rule;
+    }),
+    'unicorn/prevent-abbreviations': [
+      'error',
+      {
+        checkFilenames: false, // file names for config files sets this off more than it is worth it. Checking class names match file names probably close enough for this
+      },
+    ],
   },
   overrides: [
     {
