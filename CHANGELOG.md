@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.2](https://github.com/solarflare045/intolerable-style-guide/compare/v2.1.1...v2.1.2) (2020-10-19)
+
+
+### Bug Fixes
+
+* import rules were not applying to typescript ([ecccba5](https://github.com/solarflare045/intolerable-style-guide/commit/ecccba550e009830238420ec28f0849630d78742))
+
 ### [2.1.1](https://github.com/solarflare045/intolerable-style-guide/compare/v2.1.0...v2.1.1) (2020-10-19)
 
 ## [2.1.0](https://github.com/solarflare045/intolerable-style-guide/compare/v2.0.0...v2.1.0) (2020-10-19)
