@@ -1,5 +1,5 @@
 const { rules: baseStyleRules } = require('eslint-config-airbnb-base/rules/style');
-const { rules: baseImportRules } = require('eslint-config-airbnb-base/rules/imports');
+const { rules: baseAirbnbTypescriptRules } = require('eslint-config-airbnb-typescript/lib/shared');
 const versionSatisfies = require('semver/functions/satisfies');
 
 function getTypescriptVersion() {
@@ -139,9 +139,9 @@ module.exports = {
     ],
     'array-func/prefer-array-from': 'off', // this lost in the war with unicorn/prefer-spread
     'no-param-reassign': ['error', { props: false }], // totes legit to modify the props of an input
-    'import/no-extraneous-dependencies': baseImportRules['import/no-extraneous-dependencies'].map((rule) => {
+    'import/no-extraneous-dependencies': baseAirbnbTypescriptRules['import/no-extraneous-dependencies'].map((rule) => {
       if (Array.isArray(rule.devDependencies)) {
-        rule.devDependencies.push('/e2e/**'); // angular uses this folder pattern for end to end tests
+        rule.devDependencies.push('e2e/**'); // angular uses this folder pattern for end to end tests
       }
       return rule;
     }),
