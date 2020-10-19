@@ -1,9 +1,8 @@
 {
   "name": "eslint-config-intolerable-style-guide",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "The ultimate oppressive style guide.",
   "scripts": {
-    "commitmsg": "commitlint -e $GIT_PARAMS",
     "lint": "eslint -c index.js test/example.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "version": "standard-version"
@@ -16,16 +15,10 @@
   "main": "./index.js",
   "license": "ISC",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
     "eslint-config-airbnb-typescript": "^9.0.0",
-    "eslint-config-prettier": "^6.11.0"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^9.1.2",
-    "@commitlint/config-conventional": "^9.1.2",
-    "@typescript-eslint/eslint-plugin": "^3.9.1",
-    "@typescript-eslint/parser": "^3.9.1",
-    "eslint": "^7.7.0",
-    "eslint-find-rules": "^3.6.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-array-func": "^3.1.7",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.22.0",
@@ -36,26 +29,25 @@
     "eslint-plugin-sonarjs": "^0.5.0",
     "eslint-plugin-unicorn": "^21.0.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0",
-    "husky": "^0.14.3",
-    "prettier": "2.0.5",
-    "standard-version": "^8.0.1",
+    "prettier": "^2.1.0",
+    "semver": "7.3.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "eslint": "^7.7.0",
+    "eslint-find-rules": "^3.6.0",
+    "husky": "^4.2.5",
+    "standard-version": "^9.0.0",
     "typescript": "^3.9.7"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": ">=3.9.1",
-    "@typescript-eslint/parser": ">=3.9.1",
-    "eslint": ">=6.2.2",
-    "eslint-plugin-array-func": ">=3.1.7",
-    "eslint-plugin-eslint-comments": ">=3.2.0",
-    "eslint-plugin-import": ">=2.22.0",
-    "eslint-plugin-jest": ">=23.20.0",
-    "eslint-plugin-prettier": ">=3.1.4",
-    "eslint-plugin-promise": ">=4.2.1",
-    "eslint-plugin-security": ">=1.4.0",
-    "eslint-plugin-sonarjs": ">=0.5.0",
-    "eslint-plugin-unicorn": ">=21.0.0",
-    "eslint-plugin-you-dont-need-lodash-underscore": ">=6.10.0",
-    "prettier": ">=2.0.5",
+    "eslint": ">=7.7.0",
     "typescript": "*"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }

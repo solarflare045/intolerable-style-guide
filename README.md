@@ -8,10 +8,9 @@
 
 You can install **`eslint-config-intolerable-style-guide`** using npm via
 ```
-npm install -D eslint-config-intolerable-style-guide eslint prettier @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-array-func eslint-plugin-eslint-comments eslint-plugin-import eslint-plugin-jest eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise eslint-plugin-security eslint-plugin-sonarjs eslint-plugin-unicorn eslint-plugin-you-dont-need-lodash-underscore
+npm install -D eslint-config-intolerable-style-guide eslint
 ```
-
-This is a lot, but eslint uses peer dependencies, so it the best we can do. If you miss any, npm will warn you.
+The config will install all the plugins and whatnot, but this relies on eslint's plugin system finding them in the top of the node_modules kinda by chance. They _should_ be peer dependancies, but I reckon it'll be fine like this. Worst case scenario: you just install the plugins needed yourself.
 
 ## Configuration
 

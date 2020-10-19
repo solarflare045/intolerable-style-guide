@@ -1,7 +1,14 @@
-const {
-  rules: baseStyleRules,
-} = require('eslint-config-airbnb-base/rules/style');
+const { rules: baseStyleRules } = require('eslint-config-airbnb-base/rules/style');
+const { rules: baseImportRules } = require('eslint-config-airbnb-base/rules/imports');
+const versionSatisfies = require('semver/functions/satisfies');
 
+function getTypescriptVersion() {
+  try {
+    const typescript = require('typescript');
+    return typescript.version;
+  } catch (_e) {}
+  return null;
+}
 module.exports = {
   plugins: [
     '@typescript-eslint',
@@ -33,11 +40,14 @@ module.exports = {
     'prettier/unicorn',
   ],
   rules: {
-    'prettier/prettier': [ // have prettier yell at you through eslint
+    'prettier/prettier': [
+      // have prettier yell at you through eslint
       'error',
-      { // we could load the defaults from the file, but whatever
+      {
+        // we could load the defaults from the file, but whatever
+        printWidth: 120, // 80 is ridiculous, even for prettier's vibe line length system
         trailingComma: 'all', // typescipt is great at trailing commas
-        singleQuote: true,  // this is arbitrary and we already arbitraried it one way
+        singleQuote: true, // this is arbitrary and we already arbitraried it one way
         endOfLine: 'auto', // git takes care of this for us, never had line ending issues
       },
     ],
@@ -59,7 +69,7 @@ module.exports = {
     'no-restricted-syntax': baseStyleRules['no-restricted-syntax'].filter(
       (value) => value.selector !== 'ForOfStatement',
     ), // airbnb has banned for..of, even though for..of rules. This just removes that.
-    'class-methods-use-this': 'warn', // i can see why airbnb wants this, but the performance difference between static and instance methods is not worth an error
+    'class-methods-use-this': 'off', // i can see why airbnb wants this, but the performance difference between static and instance methods is not worth it
     'promise/prefer-await-to-then': 'error', // why aren't you using await? typescipt transpile means it is always available
     'promise/prefer-await-to-callbacks': 'warn', // callbacks can be painful to convert to promises to convert to await, but you should try
     '@typescript-eslint/consistent-type-assertions': [
@@ -74,6 +84,9 @@ module.exports = {
     '@typescript-eslint/no-magic-numbers': [
       'warn',
       {
+        ignore: [-1, 0, 1, 2],
+        ignoreArrayIndexes: true,
+        ignoreDefaultValues: true,
         ignoreEnums: true,
         ignoreNumericLiteralTypes: true,
         ignoreReadonlyClassProperties: true,
@@ -83,14 +96,84 @@ module.exports = {
     '@typescript-eslint/no-empty-function': [
       'warn',
       {
-        allow: [
-          'decoratedFunctions',
-          'private-constructors',
-          'protected-constructors',
-        ],
+        allow: ['decoratedFunctions', 'private-constructors', 'protected-constructors'],
       },
     ], // did you forget to write your function?
     'import/no-deprecated': 'warn', // dont use old code
     'no-await-in-loop': 'warn', // sometimes you want to do some network calls synchronously.
+    'no-undefined': 'warn', // we chose null as the bottom value, but sometimes ya just gotta use undefined
+    'unicorn/no-null': 'off', // null is our chosen bottom value
+    'no-underscore-dangle': [
+      'warn',
+      {
+        // these are a fun way to indicate private members
+        allowAfterThis: true,
+      },
+    ],
+    '@typescript-eslint/explicit-function-return-type': [
+      'error',
+      {
+        allowExpressions: true,
+      },
+    ],
+    'no-void': [
+      'error',
+      {
+        allowAsStatement: true,
+      },
+    ],
+    'global-require': 'off', // handled by import stuff and no-var-require
+    '@typescript-eslint/no-unsafe-member-access': 'warn', // All these no-unsafe rules are great, but 'any' creeps in in just too many palces
+    '@typescript-eslint/no-unsafe-assignment': 'warn',
+    '@typescript-eslint/no-unsafe-return': 'warn',
+    '@typescript-eslint/no-unsafe-call': 'warn',
+    'unicorn/filename-case': [
+      // We use kebab for normal stuff, and Pascal for classes
+      'error',
+      {
+        cases: {
+          kebabCase: true,
+          pascalCase: true,
+        },
+      },
+    ],
+    'array-func/prefer-array-from': 'off', // this lost in the war with unicorn/prefer-spread
+    'no-param-reassign': ['error', { props: false }], // totes legit to modify the props of an input
+    'import/no-extraneous-dependencies': baseImportRules['import/no-extraneous-dependencies'].map((rule) => {
+      if (Array.isArray(rule.devDependencies)) {
+        rule.devDependencies.push('/e2e/**'); // angular uses this folder pattern for end to end tests
+      }
+      return rule;
+    }),
+    'unicorn/prevent-abbreviations': [
+      'error',
+      {
+        checkFilenames: false, // file names for config files sets this off more than it is worth it. Checking class names match file names probably close enough for this
+      },
+    ],
   },
+  overrides: [
+    {
+      files: '**/*.js', // js files are ususally there because we aren't compiling them, so let a bunch of crazy stuff through
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-return': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
+      },
+    },
+    {
+      files: ['**/*.test.*', '**/*.spec.*'],
+      rules: {
+        'sonarjs/no-duplicate-string': 'off', // we duplicate strings in tests all the time and they shouldn't be the same instance in tests for isolation
+        'sonarjs/no-identical-functions': 'off', // tests are often bad bad on purpose
+        '@typescript-eslint/no-magic-numbers': 'off', // magic number are fun and good in tests
+      },
+    },
+  ],
 };
+const typescriptVersion = getTypescriptVersion();
+if (typescriptVersion && versionSatisfies(typescriptVersion, '<3.8')) {
+  module.exports.rules['import/no-cycle'] = 'off'; // if it is an old version of ts, we can't import only types. So disable this for those situations.
+}
