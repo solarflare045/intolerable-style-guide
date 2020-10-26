@@ -49,6 +49,7 @@ module.exports = {
         trailingComma: 'all', // typescipt is great at trailing commas
         singleQuote: true, // this is arbitrary and we already arbitraried it one way
         endOfLine: 'auto', // git takes care of this for us, never had line ending issues
+        arrowParens: 'always', // this is the default now, but just making sure
       },
     ],
     'no-prototype-builtins': 'off', // typescript saves the day here (unless there are security concerns)
