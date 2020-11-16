@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/solarflare045/intolerable-style-guide/compare/v2.1.3...v2.2.0) (2020-11-16)
+
+
+### Features
+
+* cut down the banned list of abbrevs ([bacaace](https://github.com/solarflare045/intolerable-style-guide/commit/bacaace1fa51815ef828d2d0fd564b801bb01e8e))
+
 ### [2.1.3](https://github.com/solarflare045/intolerable-style-guide/compare/v2.1.2...v2.1.3) (2020-10-26)
 
 
