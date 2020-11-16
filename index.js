@@ -150,6 +150,20 @@ module.exports = {
       'error',
       {
         checkFilenames: false, // file names for config files sets this off more than it is worth it. Checking class names match file names probably close enough for this
+        extendDefaultReplacements: false, // abbrevs are bad when they are ambiguous, but building a list of common ambiguous abbrevs is literally impossible. So lets shorten it to just the real terrible one.
+        replacements: {
+          e: {
+            error: true,
+            event: true,
+          },
+          res: {
+            result: true,
+            response: true,
+          },
+          req: {
+            request: true, // only to match the res -> response abbrev
+          },
+        },
       },
     ],
   },
