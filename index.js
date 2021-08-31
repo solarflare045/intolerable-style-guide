@@ -25,7 +25,8 @@ module.exports = {
     project: './tsconfig.json', // this is only really for local testing. the extending projects will override this
   },
   extends: [
-    'airbnb-typescript/base', //start with airbnb, which has thought through a bunch of minutiae
+    'airbnb-base', // start with airbnb, which has thought through a bunch of minutiae
+    'airbnb-typescript/base', //add some typescript variations to the airbnb base style
     'plugin:@typescript-eslint/recommended', // add some of the basic typescript rules
     'plugin:@typescript-eslint/recommended-requiring-type-checking', // add some cooler typescipt rules
     'plugin:you-dont-need-lodash-underscore/compatible-warn', // if there is an exact one-to-one native function available over lodash, then warn
@@ -35,9 +36,7 @@ module.exports = {
     'plugin:unicorn/recommended', // unicorn have added many rules about improving the readability of code related to the fun stuff es6+ gives us
     'plugin:sonarjs/recommended', // security audit rules that might help us see very damaging bugs
     'plugin:security/recommended', // more security audit rules
-    'prettier', //last so it wins over every other plugin. disables formatting issues that prettier will handle itself
-    'prettier/@typescript-eslint',
-    'prettier/unicorn',
+    'plugin:prettier/recommended', //last so it wins over every other plugin. disables formatting issues that prettier will handle itself
   ],
   rules: {
     'prettier/prettier': [
