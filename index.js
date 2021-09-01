@@ -12,7 +12,6 @@ function getTypescriptVersion() {
 module.exports = {
   plugins: [
     '@typescript-eslint',
-    'array-func',
     'promise',
     'eslint-comments',
     'unicorn',
@@ -30,7 +29,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended', // add some of the basic typescript rules
     'plugin:@typescript-eslint/recommended-requiring-type-checking', // add some cooler typescipt rules
     'plugin:you-dont-need-lodash-underscore/compatible-warn', // if there is an exact one-to-one native function available over lodash, then warn
-    'plugin:array-func/all', // ensure the correct use of the Array functions
     'plugin:promise/recommended', // use promises as well as possible
     'plugin:eslint-comments/recommended', // these are meta rules about eslint configing itself. don't be silly, basically
     'plugin:unicorn/recommended', // unicorn have added many rules about improving the readability of code related to the fun stuff es6+ gives us
@@ -137,7 +135,6 @@ module.exports = {
         },
       },
     ],
-    'array-func/prefer-array-from': 'off', // this lost in the war with unicorn/prefer-spread
     'no-param-reassign': ['error', { props: false }], // totes legit to modify the props of an input
     'import/no-extraneous-dependencies': baseAirbnbTypescriptRules['import/no-extraneous-dependencies'].map((rule) => {
       if (Array.isArray(rule.devDependencies)) {
