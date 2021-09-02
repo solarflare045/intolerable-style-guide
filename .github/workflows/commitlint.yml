@@ -2,11 +2,11 @@ name: Lint Commit Messages
 on:
   push:
     branches:
-      - master
+      - $default-branch
       - release/*
   pull_request:
     branches:
-      - master
+      - $default-branch
       - release/*
 
 jobs:
