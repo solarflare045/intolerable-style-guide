@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v2.2.0...v2.3.0) (2021-09-02)
+
+
+### Features
+
+* update many of the eslint dependencies ([34c084c](https://www.github.com/solarflare045/intolerable-style-guide/commit/34c084c9ef2b06b4c589e466845b23971c7b2c38))
+
+
+### Reverts
+
+* github workflow doesn't actully like $default-branch ([11f1165](https://www.github.com/solarflare045/intolerable-style-guide/commit/11f11657eedfd7f64fbb27d4b25735cf328f000d))
+
 ## [2.2.0](https://github.com/solarflare045/intolerable-style-guide/compare/v2.1.3...v2.2.0) (2020-11-16)
 
 
