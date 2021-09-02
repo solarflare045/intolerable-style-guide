@@ -1,4 +1,4 @@
-# intolerable-style-guide [![npm version](https://badge.fury.io/js/intolerable-style-guide.svg)](https://www.npmjs.com/package/intolerable-style-guide)
+# intolerable-style-guide [![npm version](https://badge.fury.io/js/intolerable-style-guide.svg)](https://www.npmjs.com/package/eslint-config-intolerable-style-guide)
 
 *If your linter isn't constantly yelling at you, it isn't strict enough.*
 
