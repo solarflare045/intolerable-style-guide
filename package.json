@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-intolerable-style-guide",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "The ultimate oppressive style guide.",
   "scripts": {
     "lint": "eslint -c index.js test/example.ts",
@@ -15,7 +15,12 @@
   },
   "main": "./index.js",
   "license": "ISC",
-  "files": ["index.js", "jest.js", "prettier.json", "*.md"],
+  "files": [
+    "index.js",
+    "jest.js",
+    "prettier.json",
+    "*.md"
+  ],
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.30.0",
     "@typescript-eslint/parser": "^4.30.0",
