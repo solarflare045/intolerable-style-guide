@@ -12,7 +12,6 @@ function getTypescriptVersion() {
 module.exports = {
   plugins: [
     '@typescript-eslint',
-    'array-func',
     'promise',
     'eslint-comments',
     'unicorn',
@@ -30,10 +29,8 @@ module.exports = {
     'plugin:@typescript-eslint/recommended', // add some of the basic typescript rules
     'plugin:@typescript-eslint/recommended-requiring-type-checking', // add some cooler typescipt rules
     'plugin:you-dont-need-lodash-underscore/compatible-warn', // if there is an exact one-to-one native function available over lodash, then warn
-    'plugin:array-func/all', // ensure the correct use of the Array functions
     'plugin:promise/recommended', // use promises as well as possible
     'plugin:eslint-comments/recommended', // these are meta rules about eslint configing itself. don't be silly, basically
-    'plugin:unicorn/recommended', // unicorn have added many rules about improving the readability of code related to the fun stuff es6+ gives us
     'plugin:sonarjs/recommended', // security audit rules that might help us see very damaging bugs
     'plugin:security/recommended', // more security audit rules
     'plugin:prettier/recommended', //last so it wins over every other plugin. disables formatting issues that prettier will handle itself
@@ -137,7 +134,6 @@ module.exports = {
         },
       },
     ],
-    'array-func/prefer-array-from': 'off', // this lost in the war with unicorn/prefer-spread
     'no-param-reassign': ['error', { props: false }], // totes legit to modify the props of an input
     'import/no-extraneous-dependencies': baseAirbnbTypescriptRules['import/no-extraneous-dependencies'].map((rule) => {
       if (Array.isArray(rule.devDependencies)) {
@@ -165,6 +161,62 @@ module.exports = {
         },
       },
     ],
+    'unicorn/consistent-destructuring': 'error', // Just stops you mixing styles
+    'unicorn/consistent-function-scoping': [
+      // Not just an efficiency thing, also helps with readability.
+      'error',
+      {
+        checkArrowFunctions: false, // But lets disable checking arrow functions just to be a little lenient
+      },
+    ],
+    'unicorn/error-message': 'error', // Ensure error messages aren't trash
+    'unicorn/expiring-todo-comments': 'error', // Fun and cool and also entirely optional. todos without conditions are just ignored
+    'unicorn/explicit-length-check': 'error', // Treating length as a boolean is a cool hack, but it is a hack
+    'unicorn/new-for-builtins': 'error', // Just enforces good practice
+    'unicorn/no-array-for-each': 'error', // For..of rules! array callback forEach is a poor man's map anyway
+    'unicorn/no-array-method-this-argument': 'error', // Encourages using arrow functions in very specific scenarios
+    'unicorn/no-array-push-push': 'warn', // It's technically correct, but is also a micro optimisation, so lets just make it a warning
+    'unicorn/no-array-reduce': [
+      // Just a micro optimisation, so we will just warn
+      'warn',
+      {
+        allowSimpleOperations: true, // allows summing collections
+      },
+    ],
+    'unicorn/no-console-spaces': 'warn', // This isn't a bug, just probably incorrect, so we just warn
+    'unicorn/no-for-loop': 'error', // For..of rules!
+    'unicorn/no-instanceof-array': 'error', // Be consistent about type checking
+    'unicorn/no-lonely-if': 'error', // Builds on airbnb rules we have already accepted
+    'unicorn/no-new-array': 'error', // Since we prefer spread, we should avoid new arrays
+    'unicorn/no-new-buffer': 'error', // Gives a fix for if someone uses deprecated code
+    'unicorn/no-object-as-default-parameter': 'error', // Will maybe help prevent bugs
+    'unicorn/no-this-assignment': 'warn', // Assigning `this` is cool and normal, but the rule reasoning tracks. So we only warn
+    'unicorn/no-unreadable-array-destructuring': 'error', // Just stops you from being silly
+    'unicorn/no-useless-length-check': 'warn', // Micro optimisation
+    'unicorn/no-useless-spread': 'error', // Prevents you being silly
+    'unicorn/prefer-array-find': 'error', // Prevents you being silly
+    'unicorn/prefer-array-flat': 'error', // Prevents you being silly
+    'unicorn/prefer-array-flat-map': 'error', // Prevents you being silly
+    'unicorn/prefer-array-index-of': 'error', // indexOf is more consistent
+    'unicorn/prefer-array-some': 'error', // Prevents you being silly
+    'unicorn/prefer-date-now': 'warn', // This is a micro optimisation that does not really effect anything
+    'unicorn/prefer-default-parameters': 'warn', // Encourages you to use cool new ES6 feature
+    'unicorn/prefer-includes': 'error', // Prevents you being silly
+    'unicorn/prefer-math-trunc': 'error', // Bitwise operations are pretty rare, but we should not be using them to do unrelated math
+    'unicorn/prefer-negative-index': 'warn', // Just a micro optimisation
+    'unicorn/prefer-object-from-entries': 'error', // Use more modern technique to build object in ES6
+    'unicorn/prefer-object-has-own': 'error', // Use more modern technique for this operation
+    'unicorn/prefer-optional-catch-binding': 'warn', // Just a micro optimisation
+    'unicorn/prefer-prototype-methods': 'error', // For when using prototype methods, dont be making random instances.
+    'unicorn/prefer-regexp-test': 'error', // Makes you use regex in a more sensible way
+    'unicorn/prefer-set-has': 'warn', // This is a good optimisation, but the rule has some weird things that makes me worried about making it an error
+    'unicorn/prefer-spread': 'error', // Spread rules and we all love spread
+    'unicorn/prefer-string-replace-all': 'error', // A good optimisation that stops you making unneeded regexs
+    'unicorn/prefer-string-slice': 'warn', // Makes sense as a rule, but is not vital enough to error
+    'unicorn/prefer-string-starts-ends-with': 'error', // A good optimisation that stops you making unneeded regexs
+    'unicorn/prefer-ternary': ['error', 'only-single-line'], // Compresses things down to more readable ternary (only if both are single lines)
+    'unicorn/require-number-to-fixed-digits-argument': 'error', // Is more explicit than assuming the default
+    'unicorn/throw-new-error': 'error', // Is a sensible convention that should be followed
   },
   overrides: [
     {
