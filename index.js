@@ -1,4 +1,5 @@
 const { rules: baseStyleRules } = require('eslint-config-airbnb-base/rules/style');
+const { rules: baseVariableRules } = require('eslint-config-airbnb-base/rules/variables');
 const { rules: baseAirbnbTypescriptRules } = require('eslint-config-airbnb-typescript/lib/shared');
 const versionSatisfies = require('semver/functions/satisfies');
 
@@ -141,6 +142,11 @@ module.exports = {
       }
       return rule;
     }),
+    '@typescript-eslint/no-unused-vars': [
+      // we are adding args prefixed with _ to pass. This is how typescript works, so we follow that convention
+      'warn', // baseVariableRules['no-unused-vars'][0], // accidentally set this to warn even though airbnb says error. keeping it anyways
+      { argsIgnorePattern: '^_', ...baseVariableRules['no-unused-vars'][1] },
+    ],
     'unicorn/prevent-abbreviations': [
       'error',
       {
