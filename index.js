@@ -217,6 +217,7 @@ module.exports = {
     'unicorn/prefer-ternary': ['error', 'only-single-line'], // Compresses things down to more readable ternary (only if both are single lines)
     'unicorn/require-number-to-fixed-digits-argument': 'error', // Is more explicit than assuming the default
     'unicorn/throw-new-error': 'error', // Is a sensible convention that should be followed
+    'security/detect-object-injection': 'off', // This rule goes off all the time and is almost always wrong.
   },
   overrides: [
     {
