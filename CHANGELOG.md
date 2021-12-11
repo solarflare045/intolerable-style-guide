@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.0.0...v3.1.0) (2021-12-11)
+
+
+### Features
+
+* allow async functions without await ([af4abb0](https://www.github.com/solarflare045/intolerable-style-guide/commit/af4abb076b60b597cdced7a3d552d82198930094))
+* allow function args names to be prefixed with _ to ignore unused warning ([f1683eb](https://www.github.com/solarflare045/intolerable-style-guide/commit/f1683ebf6f268db42b71345d4cc99269be45146b))
+* disable detect object injection ([641cba0](https://www.github.com/solarflare045/intolerable-style-guide/commit/641cba027f1ed1845b1a5743599d494ee6be9fc1))
+* disable prefer-await-to-callbacks rule ([a82a5d2](https://www.github.com/solarflare045/intolerable-style-guide/commit/a82a5d2f0330ae18af67963182c7e1bda141a40a))
+
 ## [3.0.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v2.2.0...v3.0.0) (2021-09-30)
 
 
