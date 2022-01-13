@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.2.0...v3.3.0) (2022-01-13)
+
+
+### Features
+
+* change security plugin to one more maintained ([6c80651](https://www.github.com/solarflare045/intolerable-style-guide/commit/6c8065182356fa9a97e124c1f3f72a355ba7bad2))
+
 ## [3.2.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.1.0...v3.2.0) (2022-01-13)
 
 
