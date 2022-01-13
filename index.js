@@ -17,7 +17,7 @@ module.exports = {
     'eslint-comments',
     'unicorn',
     'sonarjs',
-    'security',
+    'security-node',
     'you-dont-need-lodash-underscore',
     'prettier',
   ],
@@ -33,7 +33,7 @@ module.exports = {
     'plugin:promise/recommended', // use promises as well as possible
     'plugin:eslint-comments/recommended', // these are meta rules about eslint configing itself. don't be silly, basically
     'plugin:sonarjs/recommended', // security audit rules that might help us see very damaging bugs
-    'plugin:security/recommended', // more security audit rules
+    'plugin:security-node/recommended', // more security audit rules
     'plugin:prettier/recommended', //last so it wins over every other plugin. disables formatting issues that prettier will handle itself
   ],
   rules: {
@@ -223,9 +223,9 @@ module.exports = {
     'unicorn/prefer-ternary': ['error', 'only-single-line'], // Compresses things down to more readable ternary (only if both are single lines)
     'unicorn/require-number-to-fixed-digits-argument': 'error', // Is more explicit than assuming the default
     'unicorn/throw-new-error': 'error', // Is a sensible convention that should be followed
-    'security/detect-object-injection': 'off', // This rule goes off all the time and is almost always wrong.
     '@typescript-eslint/require-await': 'off', // Sometimes a function needs a promise to fit an interface. Or sometimes you want to throw instead of reject. No one really makes a function async without meaning to. especially combined with the forced return type declaration
     'promise/prefer-await-to-callbacks': 'off', // Too many false positives
+    'security-node/detect-crlf': 'off', // Would be more annoying than helpful.
   },
   overrides: [
     {
