@@ -226,6 +226,14 @@ module.exports = {
     '@typescript-eslint/require-await': 'off', // Sometimes a function needs a promise to fit an interface. Or sometimes you want to throw instead of reject. No one really makes a function async without meaning to. especially combined with the forced return type declaration
     'promise/prefer-await-to-callbacks': 'off', // Too many false positives
     'security-node/detect-crlf': 'off', // Would be more annoying than helpful.
+    'unicorn/no-useless-fallback-in-spread': 'error', // Prevents the dev doing something unnecessary
+    'unicorn/template-indent': 'warn', // Makes sure your inline string code can be neater if possible
+    'unicorn/prefer-export-from': ['error', { ignoreUsedVariables: true }], // Good practice, but if you are using then it makes sense to allow it.
+    'unicorn/prefer-code-point': 'error', // Use the more consistent functions
+    'unicorn/no-await-expression-member': 'warn', // Encourages writing more readable code
+    'unicorn/no-useless-promise-resolve-reject': 'error', // Dont make functions more complicated for no reason
+    'unicorn/no-thenable': 'warn', // This can only maybe cause problems, but we should warn the dev they are being weird
+    'unicorn/prefer-json-parse-buffer': 'warn', // It's an optimisation, but a sensible one if the file is quite large
   },
   overrides: [
     {
