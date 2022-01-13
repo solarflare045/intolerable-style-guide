@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.3.0...v3.4.0) (2022-01-13)
+
+
+### Features
+
+* add some of the new rules that come from the unicorn plugin ([cd4d581](https://www.github.com/solarflare045/intolerable-style-guide/commit/cd4d581ba9e20f71eea3af7f27fa172ddbb08d38))
+* update unicorn plugin to latest ([2cf9f8a](https://www.github.com/solarflare045/intolerable-style-guide/commit/2cf9f8a654ccf36aca393be2ad9a7c22b98c47aa))
+
 ## [3.3.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.2.0...v3.3.0) (2022-01-13)
 
 

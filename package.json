@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-intolerable-style-guide",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "The ultimate oppressive style guide.",
   "scripts": {
     "lint": "eslint -c index.js test/example.ts",
