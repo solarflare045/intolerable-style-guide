@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.1.0...v3.2.0) (2022-01-13)
+
+
+### Features
+
+* update airbnb base style guide ([521e8ab](https://www.github.com/solarflare045/intolerable-style-guide/commit/521e8abaceb0f1405373bc377b67b5eca1630ca9))
+* update jest plugin ([0bfe77d](https://www.github.com/solarflare045/intolerable-style-guide/commit/0bfe77d8fe7a0f05b2c0c875044dd12af741ffbf))
+* update prettier library ([40bca83](https://www.github.com/solarflare045/intolerable-style-guide/commit/40bca834d01f0ef85a1fcd4b60c2260a004b8cfe))
+* update promise plugin ([1dcca03](https://www.github.com/solarflare045/intolerable-style-guide/commit/1dcca03fe8d10d8a2b00d242a7abb31dd71f41ca))
+* update promise plugin to v6 ([8b6dff1](https://www.github.com/solarflare045/intolerable-style-guide/commit/8b6dff1805ae6f58bf9eb13f178e1fabcda6e041))
+* update sonarjs plugin ([92aefd7](https://www.github.com/solarflare045/intolerable-style-guide/commit/92aefd763def39983957f277a5db763372cd57c0))
+* update typescript parser to support later versions ([57c85b5](https://www.github.com/solarflare045/intolerable-style-guide/commit/57c85b5f16713c19ee992c3f100300ce308483e0))
+* update unicorn plugin (but don't add new rules) ([5e64f55](https://www.github.com/solarflare045/intolerable-style-guide/commit/5e64f557617fbedf4e5e186c923ad28cd5ddabf9))
+
 ## [3.1.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.0.0...v3.1.0) (2021-12-11)
 
 
