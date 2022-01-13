@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.4.0...v3.5.0) (2022-01-13)
+
+
+### Features
+
+* add react support ([226b1c2](https://www.github.com/solarflare045/intolerable-style-guide/commit/226b1c225e9bf3f3d9fb8ba27eb6b8ff49affede))
+
+
+### Bug Fixes
+
+* fix the react config to work on lower node versions ([00591bf](https://www.github.com/solarflare045/intolerable-style-guide/commit/00591bf242d366a0b234ce1ad0a4d51d0c2cd6e0))
+
 ## [3.4.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.3.0...v3.4.0) (2022-01-13)
 
 
