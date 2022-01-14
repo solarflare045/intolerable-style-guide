@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.1](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.5.0...v3.5.1) (2022-01-14)
+
+
+### Bug Fixes
+
+* remove consistent-destructuring rule, as it false positives too much ([d66fe87](https://www.github.com/solarflare045/intolerable-style-guide/commit/d66fe8774caf6fde50999836ae565297cc1c3db1))
+
 ## [3.5.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.4.0...v3.5.0) (2022-01-13)
 
 
