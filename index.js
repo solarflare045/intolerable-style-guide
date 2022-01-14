@@ -167,7 +167,6 @@ module.exports = {
         },
       },
     ],
-    'unicorn/consistent-destructuring': 'error', // Just stops you mixing styles
     'unicorn/consistent-function-scoping': [
       // Not just an efficiency thing, also helps with readability.
       'error',
