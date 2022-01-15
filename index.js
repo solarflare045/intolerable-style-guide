@@ -251,6 +251,11 @@ module.exports = {
         'sonarjs/no-duplicate-string': 'off', // we duplicate strings in tests all the time and they shouldn't be the same instance in tests for isolation
         'sonarjs/no-identical-functions': 'off', // tests are often bad bad on purpose
         '@typescript-eslint/no-magic-numbers': 'off', // magic number are fun and good in tests
+        // tests are full of any casts and whatnot
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-return': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
       },
     },
   ],
