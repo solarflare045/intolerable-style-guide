@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.5.2](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.5.1...v3.5.2) (2022-02-07)
+
+
+### Bug Fixes
+
+* allow any in tests ([891b50f](https://www.github.com/solarflare045/intolerable-style-guide/commit/891b50f9ff93257b9d46d25c7ff0c355697a3839))
+* allow more magic numbers (10, 100, 1000) ([5b3b939](https://www.github.com/solarflare045/intolerable-style-guide/commit/5b3b939933c9e1a26d211df603e94c0c78d0d27c))
+
 ### [3.5.1](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.5.0...v3.5.1) (2022-01-14)
 
 
