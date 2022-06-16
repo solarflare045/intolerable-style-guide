@@ -11,7 +11,15 @@ function getTypescriptVersion() {
   return null;
 }
 module.exports = {
-  plugins: ['@typescript-eslint', 'promise', 'eslint-comments', 'unicorn', 'sonarjs', 'security-node', 'prettier'],
+  plugins: [
+    '@typescript-eslint',
+    'promise',
+    'eslint-comments',
+    'unicorn',
+    'sonarjs',
+    'security-node',
+    'prettier',
+  ],
   parserOptions: {
     project: './tsconfig.json', // this is only really for local testing. the extending projects will override this
   },
