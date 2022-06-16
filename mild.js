@@ -22,6 +22,8 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': base.rules['@typescript-eslint/no-unused-vars'],
     '@typescript-eslint/no-use-before-define': base.rules['@typescript-eslint/no-use-before-define'],
     '@typescript-eslint/require-await': base.rules['@typescript-eslint/require-await'],
+    
+    'eqeqeq': base.rules['eqeqeq'],
   },
   overrides: [
     {
