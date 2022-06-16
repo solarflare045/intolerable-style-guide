@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.5.1...v3.6.0) (2022-06-16)
+
+
+### Features
+
+* :sparkles: add mild variant ([85bb7d0](https://www.github.com/solarflare045/intolerable-style-guide/commit/85bb7d0f3c05915daec3242c12b7b26bfded9bcb))
+
+
+### Bug Fixes
+
+* :bug: disable additional linting rules in spec/cy files ([21d4fbe](https://www.github.com/solarflare045/intolerable-style-guide/commit/21d4fbede02bdd47d9b8a2e3aa40dc0c15579e14))
+* allow any in tests ([891b50f](https://www.github.com/solarflare045/intolerable-style-guide/commit/891b50f9ff93257b9d46d25c7ff0c355697a3839))
+* allow more magic numbers (10, 100, 1000) ([5b3b939](https://www.github.com/solarflare045/intolerable-style-guide/commit/5b3b939933c9e1a26d211df603e94c0c78d0d27c))
+
 ### [3.5.1](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.5.0...v3.5.1) (2022-01-14)
 
 
