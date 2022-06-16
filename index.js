@@ -18,7 +18,6 @@ module.exports = {
     'unicorn',
     'sonarjs',
     'security-node',
-    'you-dont-need-lodash-underscore',
     'prettier',
   ],
   parserOptions: {
@@ -29,7 +28,6 @@ module.exports = {
     'airbnb-typescript/base', //add some typescript variations to the airbnb base style
     'plugin:@typescript-eslint/recommended', // add some of the basic typescript rules
     'plugin:@typescript-eslint/recommended-requiring-type-checking', // add some cooler typescipt rules
-    'plugin:you-dont-need-lodash-underscore/compatible-warn', // if there is an exact one-to-one native function available over lodash, then warn
     'plugin:promise/recommended', // use promises as well as possible
     'plugin:eslint-comments/recommended', // these are meta rules about eslint configing itself. don't be silly, basically
     'plugin:sonarjs/recommended', // security audit rules that might help us see very damaging bugs
