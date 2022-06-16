@@ -4,6 +4,7 @@
   "description": "The ultimate oppressive style guide.",
   "scripts": {
     "lint": "eslint -c index.js test/example.ts",
+    "lint:mild": "eslint -c mild.js test/example.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "version": "standard-version",
     "prepare": "husky install"
@@ -19,6 +20,7 @@
     "index.js",
     "jest.js",
     "react.js",
+    "mild.js",
     "prettier.json",
     "*.md"
   ],
