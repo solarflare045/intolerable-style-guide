@@ -42,7 +42,7 @@
     "eslint-plugin-security-node": "^1.1.0",
     "eslint-plugin-sonarjs": "^0.11.0",
     "eslint-plugin-unicorn": "^40.0.0",
-    "prettier": "2.5.1",
+    "prettier": "^2.8.8",
     "semver": "7.3.2"
   },
   "devDependencies": {
