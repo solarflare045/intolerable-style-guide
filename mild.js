@@ -15,7 +15,7 @@ module.exports = {
   ],
   rules: {
     'prettier/prettier': base.rules['prettier/prettier'],
-    'import/no-deprecated': base.rules['import/no-deprecated'], // dont use old code
+    // 'import/no-deprecated': base.rules['import/no-deprecated'], // dont use old code
 
     '@typescript-eslint/explicit-function-return-type': base.rules['@typescript-eslint/explicit-function-return-type'],
     '@typescript-eslint/no-empty-function': base.rules['@typescript-eslint/no-empty-function'],
