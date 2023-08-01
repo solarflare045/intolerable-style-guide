@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.1.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v4.0.0...v4.1.0) (2023-08-01)
+
+
+### Features
+
+* include no-deprecated rule ([07bdbd0](https://www.github.com/solarflare045/intolerable-style-guide/commit/07bdbd0f169902a869de43cfc7c86809877e12cd))
+
+
+### Bug Fixes
+
+* bump prettier version to latest 2 ([464b080](https://www.github.com/solarflare045/intolerable-style-guide/commit/464b080845436a39e8e50d2bf2b251f902514b2d))
+
 ## [4.0.0](https://www.github.com/solarflare045/intolerable-style-guide/compare/v3.5.1...v4.0.0) (2022-06-16)
 
 
