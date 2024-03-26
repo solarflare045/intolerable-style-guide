@@ -1,4 +1,4 @@
-const a = {};
-async function test(): Promise<never> {
-  throw new Error('wow');
+const str: string | null = 'Ed Chen';
+
+if (str) {
 }

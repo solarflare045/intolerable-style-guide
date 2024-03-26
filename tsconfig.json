@@ -2,7 +2,8 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "lib": ["ES2015"]
+    "lib": ["ES2015"],
+    "strictNullChecks": true
   },
   "include": ["test/*.ts"],
   "exclude": ["node_modules"]

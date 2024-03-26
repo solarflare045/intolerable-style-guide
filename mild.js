@@ -40,6 +40,7 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-magic-numbers': 'off', // magic number are fun and good in tests
         // tests are full of any casts and whatnot
+        '@typescript-eslint/dot-notation': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/no-unsafe-argument': 'off',
         '@typescript-eslint/no-unsafe-assignment': 'off',
