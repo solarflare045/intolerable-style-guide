@@ -2,6 +2,7 @@ const versionSatisfies = require('semver/functions/satisfies');
 
 const importRules = require('./rules/import');
 const typescriptEslintRules = require('./rules/typescript-eslint');
+const unicornRules = require('./rules/unicorn');
 
 function getTypescriptVersion() {
   try {
@@ -14,6 +15,7 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
     'import',
+    'unicorn',
     'prettier',
   ],
   parserOptions: {
@@ -41,6 +43,7 @@ module.exports = {
 
     ...typescriptEslintRules,
     ...importRules,
+    ...unicornRules,
   },
   overrides: [
     {

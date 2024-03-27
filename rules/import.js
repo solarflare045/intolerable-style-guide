@@ -1,4 +1,6 @@
 module.exports = {
+  'import/export': 'error',
+  'import/first': 'error',
   'import/order': ['error', {
     'alphabetize': {
       order: 'asc',
@@ -10,5 +12,6 @@ module.exports = {
   'import/newline-after-import': 'error',
   'import/no-absolute-path': 'error',
   'import/no-deprecated': 'warn',
+  'import/no-mutable-exports': 'error',
   'import/no-self-import': 'error',
 };

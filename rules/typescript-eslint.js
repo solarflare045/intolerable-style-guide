@@ -90,7 +90,7 @@ module.exports = {
   '@typescript-eslint/no-unused-expressions': 'error', 'no-unused-expressions': 'off',
   '@typescript-eslint/no-unused-vars': ['warn', {
     argsIgnorePattern: '^_',
-  }],
+  }], 'no-unused-vars': 'off',
   '@typescript-eslint/no-use-before-define': 'off', 'no-use-before-define': 'off',
   '@typescript-eslint/no-useless-constructor': 'error', 'no-useless-constructor': 'off',
   '@typescript-eslint/no-useless-empty-export': 'error',

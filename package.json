@@ -31,6 +31,7 @@
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unicorn": "^51.0.1",
     "prettier": "^2.8.8",
     "semver": "^7.5.2"
   },
