@@ -5,7 +5,7 @@ on: push
 jobs:
   test-lint:
     name: Test Linting Configuration
-    runs-on: ubunut-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout

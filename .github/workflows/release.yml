@@ -12,7 +12,7 @@ permissions:
 jobs:
   release:
     name: Release
-    runs-on: ubunut-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: write
       issues: write
