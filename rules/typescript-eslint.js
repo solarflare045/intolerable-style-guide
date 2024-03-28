@@ -42,7 +42,9 @@ module.exports = {
   '@typescript-eslint/no-empty-interface': 'error',
   '@typescript-eslint/no-explicit-any': 'error',
   '@typescript-eslint/no-extra-non-null-assertion': 'error',
-  '@typescript-eslint/no-extraneous-class': 'error',
+  '@typescript-eslint/no-extraneous-class': ['error', {
+    allowWithDecorator: true,
+  }],
   '@typescript-eslint/no-floating-promises': ['error', {
     ignoreVoid: true,
   }],
