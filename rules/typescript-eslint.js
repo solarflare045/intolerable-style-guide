@@ -28,7 +28,33 @@ module.exports = {
   '@typescript-eslint/explicit-module-boundary-types': 'off',
   '@typescript-eslint/init-declarations': 'error', 'init-declarations': 'off',
   '@typescript-eslint/method-signature-style': ['error', 'property'],
-  '@typescript-eslint/naming-convention': ['error'], // TODO - revisit this. This is a big one!
+  '@typescript-eslint/naming-convention': [
+    'error',
+    {
+      selector: 'default',
+      format: ['camelCase'],
+      leadingUnderscore: 'allow',
+      trailingUnderscore: 'allow',
+    },
+    {
+      selector: 'import',
+      format: ['camelCase', 'PascalCase'],
+    },
+    {
+      selector: 'variable',
+      format: ['camelCase', 'UPPER_CASE'],
+      leadingUnderscore: 'allow',
+      trailingUnderscore: 'allow',
+    },
+    {
+      selector: 'typeLike',
+      format: ['PascalCase'],
+    },
+    {
+      selector: ['objectLiteralProperty', 'typeProperty'],
+      format: null,
+    },
+  ],
   '@typescript-eslint/no-array-delete': 'error',
   '@typescript-eslint/no-base-to-string': 'error',
   '@typescript-eslint/no-confusing-non-null-assertion': 'error',
