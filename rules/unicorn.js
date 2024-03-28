@@ -4,4 +4,5 @@ module.exports = {
     allowWarningComments: false,
   }],
   'unicorn/no-abusive-eslint-disable': 'error',
+  'unicorn/no-console-spaces': 'error',
 }

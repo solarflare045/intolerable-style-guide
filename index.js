@@ -1,20 +1,13 @@
-const versionSatisfies = require('semver/functions/satisfies');
-
 const importRules = require('./rules/import');
+const sonarjsRules = require('./rules/sonar');
 const typescriptEslintRules = require('./rules/typescript-eslint');
 const unicornRules = require('./rules/unicorn');
 
-function getTypescriptVersion() {
-  try {
-    const typescript = require('typescript');
-    return typescript.version;
-  } catch (_e) {}
-  return null;
-}
 module.exports = {
   plugins: [
     '@typescript-eslint',
     'import',
+    'sonarjs',
     'unicorn',
     'prettier',
   ],
@@ -41,9 +34,10 @@ module.exports = {
       },
     ],
 
-    ...typescriptEslintRules,
     ...importRules,
+    ...typescriptEslintRules,
     ...unicornRules,
+    ...sonarjsRules,
   },
   overrides: [
     {
@@ -71,7 +65,3 @@ module.exports = {
     },
   ],
 };
-const typescriptVersion = getTypescriptVersion();
-if (typescriptVersion && versionSatisfies(typescriptVersion, '<3.8')) {
-  module.exports.rules['import/no-cycle'] = 'off'; // if it is an old version of ts, we can't import only types. So disable this for those situations.
-}
