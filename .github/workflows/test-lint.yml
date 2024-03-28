@@ -1,0 +1,26 @@
+name: Test Lint
+
+on: push
+
+jobs:
+  test-lint:
+    name: Test Linting Configuration
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test base configuration
+        run: npm run test
+
+      - name: Test mild configuration
+        run: npm run test:mild
