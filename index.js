@@ -51,7 +51,7 @@ module.exports = {
       },
     },
     {
-      files: ['**/*.test.*', '**/*.spec.*', '**/*.cy.*'],
+      files: ['**/*.test.*', '**/*.spec.*', '**/*.e2e-spec.*', '**/*.cy.*'],
       rules: {
         '@typescript-eslint/init-declarations': 'off', // in tests it is handy to have a variable initialized later in a beforeEach block.
         '@typescript-eslint/no-magic-numbers': 'off', // magic number are fun and good in tests
