@@ -163,7 +163,7 @@ module.exports = {
   }],
   '@typescript-eslint/return-await': ['error', 'in-try-catch'], 'no-return-await': 'off',
   '@typescript-eslint/sort-type-constituents': 'error',
-  '@typescript-eslint/strict-boolean-expressions': ['error', {
+  '@typescript-eslint/strict-boolean-expressions': ['warn', {
     allowString: true,
     allowNumber: true,
     allowNullableObject: true,
