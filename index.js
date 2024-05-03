@@ -1,3 +1,4 @@
+const eslintRules = require('./rules/eslint');
 const importRules = require('./rules/import');
 const sonarjsRules = require('./rules/sonar');
 const typescriptEslintRules = require('./rules/typescript-eslint');
@@ -34,6 +35,7 @@ module.exports = {
       },
     ],
 
+    ...eslintRules,
     ...importRules,
     ...typescriptEslintRules,
     ...unicornRules,
