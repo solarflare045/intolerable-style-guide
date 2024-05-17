@@ -2,7 +2,7 @@ module.exports = {
   'sonarjs/cognitive-complexity': ['warn', 15],
   'sonarjs/no-all-duplicated-branches': 'error',
   'sonarjs/no-collapsible-if': 'error',
-  'sonarjs/no-duplicate-string': ['error', { threshold: 3 }],
+  'sonarjs/no-duplicate-string': ['warn', { threshold: 3 }],
   'sonarjs/no-duplicated-branches': 'error',
   'sonarjs/no-empty-collection': 'error',
   'sonarjs/no-gratuitous-expressions': 'error',
