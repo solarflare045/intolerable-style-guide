@@ -1,9 +1,9 @@
-import { Linter } from 'eslint';
-import importPlugin from 'eslint-plugin-import';
+import tseslint from 'typescript-eslint';
+import * as importPlugin from 'eslint-plugin-import';
 
 import { tsiif } from '../helpers/iif';
 
-const config: Linter.FlatConfig = {
+export default tseslint.config({
   plugins: {
     import: importPlugin,
   },
@@ -25,6 +25,4 @@ const config: Linter.FlatConfig = {
     'import/no-mutable-exports': 'error',
     'import/no-self-import': 'error',
   }
-}
-
-export default config;
+});

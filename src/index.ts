@@ -1,6 +1,5 @@
-import { Linter } from 'eslint';
 import js from '@eslint/js';
-import typescriptEslintPlugin from '@typescript-eslint/eslint-plugin';
+import tseslint from 'typescript-eslint';
 import prettierPluginConfig from 'eslint-plugin-prettier/recommended';
 
 import eslintRules from './rules/eslint';
@@ -9,17 +8,15 @@ import sonarjsRules from './rules/sonar';
 import typescriptEslintRules from './rules/typescript-eslint';
 import unicornRules from './rules/unicorn';
 
-console.log(typescriptEslintPlugin.configs);
-
-const config: Linter.FlatConfig[] = [
+export const ISG = tseslint.config(
   js.configs.recommended,
-  typescriptEslintPlugin.configs['recommended-requiring-type-checking'],
+  ...tseslint.configs.recommendedTypeChecked,
 
-  eslintRules,
-  importRules,
-  typescriptEslintRules,
-  unicornRules,
-  sonarjsRules,
+  ...eslintRules,
+  ...importRules,
+  ...typescriptEslintRules,
+  ...unicornRules,
+  ...sonarjsRules,
 
   prettierPluginConfig,
   {
@@ -67,6 +64,6 @@ const config: Linter.FlatConfig[] = [
       'sonarjs/no-duplicate-string': 'off',
     },
   },
-];
+);
 
-export default config;
+export default ISG;

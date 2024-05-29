@@ -1,7 +1,7 @@
-import { Linter } from 'eslint';
+import tseslint from 'typescript-eslint';
 import unicorn from 'eslint-plugin-unicorn';
 
-const config: Linter.FlatConfig = {
+export default tseslint.config({
   plugins: {
     unicorn,
   },
@@ -13,6 +13,4 @@ const config: Linter.FlatConfig = {
     'unicorn/no-abusive-eslint-disable': 'error',
     'unicorn/no-console-spaces': 'error',
   }
-}
-
-export default config;
+});

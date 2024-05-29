@@ -1,10 +1,8 @@
-import { Linter } from 'eslint';
+import tseslint from 'typescript-eslint';
 
-const config: Linter.FlatConfig = {
+export default tseslint.config({
   rules: {
     'curly': ['error', 'all'],
     'eqeqeq': ['error', 'smart'],
   },
-};
-
-export default config;
+});

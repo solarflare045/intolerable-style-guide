@@ -1,12 +1,8 @@
-import { Linter } from 'eslint';
-import eslintPlugin from '@typescript-eslint/eslint-plugin';
+import tseslint from 'typescript-eslint';
 
 import { tsiif } from '../helpers/iif';
 
-const config: Linter.FlatConfig = {
-  plugins: {
-    '@typescript-eslint': eslintPlugin,
-  },
+export default tseslint.config({
   rules: {
     '@typescript-eslint/adjacent-overload-signatures': 'error',
     '@typescript-eslint/array-type': ['error', {
@@ -184,6 +180,4 @@ const config: Linter.FlatConfig = {
     '@typescript-eslint/unbound-method': 'off',
     '@typescript-eslint/use-unknown-in-catch-callback-variable': 'error',
   }
-}
-
-export default config;
+});

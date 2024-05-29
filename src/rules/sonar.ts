@@ -1,7 +1,7 @@
-import { Linter } from 'eslint';
-import sonarjs from 'eslint-plugin-sonarjs';
+import tseslint from 'typescript-eslint';
+import * as sonarjs from 'eslint-plugin-sonarjs';
 
-const config: Linter.FlatConfig = {
+export default tseslint.config({
   plugins: {
     sonarjs,
   },
@@ -23,6 +23,4 @@ const config: Linter.FlatConfig = {
     'sonarjs/prefer-single-boolean-return': 'error',
     'sonarjs/prefer-while': 'error',
   }
-}
-
-export default config;
+});

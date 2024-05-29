@@ -8,23 +8,28 @@
 
 You can install **`eslint-config-intolerable-style-guide`** using npm via
 ```
-npm install -D eslint-config-intolerable-style-guide eslint
+npm install -D eslint-config-intolerable-style-guide eslint@8
 ```
 The config will install all the plugins and whatnot, but this relies on eslint's plugin system finding them in the top of the node_modules kinda by chance. They _should_ be peer dependancies, but I reckon it'll be fine like this. Worst case scenario: you just install the plugins needed yourself.
 
 ## Configuration
 
-If you look in the `example-project` folder, it will have the files you need.
-They are all optional except for `.eslintrc.yml`. At a minimum, that will need to be:
-```yml
-extends:
-  - intolerable-style-guide
-parserOptions:
-  project: ./tsconfig.json
-root: true
+You can configure ESLint to use the Intolerable Style Guide by adding the following `eslint.config.js` to your project:
+```javascript
+const { ISG } = require('eslint-config-intolerable-style-guide');
+
+module.exports = [
+  ...ISG,
+
+  {
+    languageOptions: {
+      parserOptions: {
+        project: './tsconfig.json',
+      },
+    },
+  },
+];
 ```
-The `.eslintignore` file is a gitignore style file to tell the linter what folders not to look at.
-The `.prettierrc` and `.prettierignore` files will tell your IDE how to do formatting if you use the prettier plugin for it. If you just want eslint to fix those, you can leave it out.
 
 It is also recommended to manually add a linting script to your `package.json`, which should look like this:
 

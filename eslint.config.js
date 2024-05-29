@@ -1,5 +1,14 @@
-const index = require('./dist/');
+const { ISG } = require('./dist');
 
-console.log(index);
+// This file is used for internal testing only.
+module.exports = [
+  ...ISG,
 
-module.exports = index.default;
+  {
+    languageOptions: {
+      parserOptions: {
+        project: './tsconfig.json',
+      },  
+    },
+  },
+];
