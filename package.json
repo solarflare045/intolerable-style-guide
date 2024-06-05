@@ -4,8 +4,8 @@
   "description": "The ultimate oppressive style guide.",
   "scripts": {
     "build": "rm -rf dist && tsc -p ./tsconfig.build.json",
-    "lint": "tsc -p ./tsconfig.build.json && eslint src/**",
-    "test": "tsc -p ./tsconfig.build.json && npm run --prefix=example-project lint",
+    "lint": "eslint src/**",
+    "test": "npm run --prefix=example-project lint",
     "prepare": "husky install",
     "semantic-release": "semantic-release"
   },
