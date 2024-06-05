@@ -1,11 +1,12 @@
-import tseslint from 'typescript-eslint';
 import * as sonarjs from 'eslint-plugin-sonarjs';
+import tseslint from 'typescript-eslint';
 
 export default tseslint.config({
   plugins: {
     sonarjs,
   },
   rules: {
+    // eslint-disable-next-line @typescript-eslint/no-magic-numbers -- 15 is a very magic number.
     'sonarjs/cognitive-complexity': ['warn', 15],
     'sonarjs/no-all-duplicated-branches': 'error',
     'sonarjs/no-collapsible-if': 'error',
@@ -22,5 +23,5 @@ export default tseslint.config({
     'sonarjs/prefer-object-literal': 'error',
     'sonarjs/prefer-single-boolean-return': 'error',
     'sonarjs/prefer-while': 'error',
-  }
+  },
 });

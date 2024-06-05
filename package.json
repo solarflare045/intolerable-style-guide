@@ -4,10 +4,8 @@
   "description": "The ultimate oppressive style guide.",
   "scripts": {
     "build": "rm -rf dist && tsc -p ./tsconfig.build.json",
-    "lint": "eslint test/example.ts",
-    "lint:mild": "eslint test/example.ts",
-    "test": "eslint test/good-file.ts",
-    "test:mild": "eslint test/good-file.ts",
+    "lint": "tsc -p ./tsconfig.build.json && eslint src/**",
+    "test": "tsc -p ./tsconfig.build.json && npm run --prefix=example-project lint",
     "prepare": "husky install",
     "semantic-release": "semantic-release"
   },
@@ -42,6 +40,8 @@
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^13.1.0",
     "@types/eslint": "^8.56.10",
+    "@types/eslint__js": "^8.42.3",
+    "@types/semver": "^7.5.8",
     "eslint": "^8.57.0",
     "eslint-find-rules": "^4.1.0",
     "husky": "^7.0.2",
