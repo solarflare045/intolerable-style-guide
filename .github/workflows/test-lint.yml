@@ -25,5 +25,8 @@ jobs:
       - name: Lint Self
         run: npm run lint
 
+      - name: Install Example Project dependencies
+        run : (cd example-project && npm ci)
+
       - name: Lint Example Project
         run: npm run test
