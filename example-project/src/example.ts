@@ -10,3 +10,9 @@ if (c) {
     console.log('BLARG');
   }
 }
+
+async function main() {
+
+}
+
+main();

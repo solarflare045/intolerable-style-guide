@@ -6,7 +6,7 @@ function getTypescriptVersion(): string | null {
     const typescript = require('typescript');
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access
     return typescript.version;
-  } catch (_e) {
+  } catch {
     // Eat this delicious error. Om nom.
   }
   return null;
