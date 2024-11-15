@@ -1,0 +1,14 @@
+{
+  "name": "example-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint -c ./eslint.config.js ./src/good-file.ts"
+  },
+  "dependencies": {
+    "eslint-config-intolerable-style-guide": ".."
+  },
+  "author": "",
+  "license": "ISC"
+}
