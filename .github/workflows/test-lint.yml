@@ -19,8 +19,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Test base configuration
-        run: npm run test
+      - name: Build
+        run: npm run build
 
-      - name: Test mild configuration
-        run: npm run test:mild
+      - name: Lint Self
+        run: npm run lint
+
+      - name: Lint Example Project
+        run: npm run test
