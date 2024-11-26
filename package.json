@@ -31,7 +31,7 @@
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-sonarjs": "2.0.4",
+    "eslint-plugin-sonarjs": "^2.0.4",
     "eslint-plugin-unicorn": "^56.0.0",
     "prettier": "^3.3.3",
     "semver": "^7.6.3",
@@ -43,23 +43,13 @@
     "@types/eslint": "^9.6.1",
     "@types/eslint__js": "^8.42.3",
     "@types/semver": "^7.5.8",
-    "eslint": "^9.15.0",
+    "eslint": "^8.57.1",
     "husky": "^9.1.6",
     "semantic-release": "^24.2.0",
     "typescript": "^5.6.3"
   },
   "peerDependencies": {
-    "eslint": ">=9",
+    "eslint": ">=8.57.1",
     "typescript": "*"
-  },
-  "overrides": {
-    "eslint-plugin-sonarjs@2.0.4": {
-      "@typescript-eslint/plugin": "^8.14.0",
-      "@typescript-eslint/parser": "^8.14.0",
-      "@typescript-eslint/utils": "^8.14.0",
-      "@typescript-eslint/eslint-plugin": "^8.14.0",
-      "eslint-plugin-import": "$eslint-plugin-import",
-      "eslint-plugin-react-hooks": "^5.0.0"
-    }
   }
 }
