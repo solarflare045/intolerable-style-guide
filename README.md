@@ -8,7 +8,7 @@
 
 You can install **`eslint-config-intolerable-style-guide`** using npm via
 ```
-npm install -D eslint-config-intolerable-style-guide eslint@9
+npm install -D eslint-config-intolerable-style-guide eslint@^8.57.1
 ```
 
 ## Configuration
