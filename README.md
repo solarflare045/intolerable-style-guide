@@ -13,11 +13,11 @@ npm install -D eslint-config-intolerable-style-guide eslint@9
 
 ## Configuration
 
-You can configure ESLint to use the Intolerable Style Guide by adding the following `eslint.config.js` to your project:
+You can configure ESLint to use the Intolerable Style Guide by adding the following `eslint.config.mjs` to your project:
 ```javascript
-const { ISG } = require('eslint-config-intolerable-style-guide');
+import { ISG } from 'eslint-config-intolerable-style-guide';
 
-module.exports = [
+default export [
   ...ISG,
 
   {
