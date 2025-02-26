@@ -18,6 +18,10 @@ You can configure ESLint to use the Intolerable Style Guide by adding the follow
 import { ISG } from 'eslint-config-intolerable-style-guide';
 
 default export [
+  {
+    ignores: ['eslint.config.mjs'],
+  },
+
   ...ISG,
 
   {
