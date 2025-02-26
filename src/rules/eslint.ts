@@ -4,5 +4,6 @@ export default tseslint.config({
   rules: {
     curly: ['error', 'all'],
     eqeqeq: ['error', 'smart'],
+    'no-warning-comments': 'warn',
   },
 });
