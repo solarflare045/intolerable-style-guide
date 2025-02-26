@@ -10,7 +10,7 @@ export default tseslint.config({
     'unicorn/expiring-todo-comments': [
       'error',
       {
-        allowWarningComments: false,
+        allowWarningComments: true,
       },
     ],
     'unicorn/no-abusive-eslint-disable': 'error',
