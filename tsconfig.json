@@ -1,9 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "lib": ["ES2015"]
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noEmit": true,
+    "skipLibCheck": true
   },
-  "include": ["test/*.ts"],
+  "include": ["src"],
   "exclude": ["node_modules"]
 }

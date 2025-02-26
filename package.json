@@ -1,61 +1,54 @@
 {
   "name": "eslint-config-intolerable-style-guide",
-  "version": "4.1.2",
+  "version": "0.0.0-development",
   "description": "The ultimate oppressive style guide.",
   "scripts": {
-    "lint": "eslint -c index.js test/example.ts",
-    "lint:mild": "eslint -c mild.js test/example.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "version": "standard-version",
-    "prepare": "husky install"
+    "build": "rm -rf dist && tsc -p ./tsconfig.build.json",
+    "lint": "eslint src/**",
+    "test": "npm run --prefix=example-project lint",
+    "prepare": "husky install",
+    "semantic-release": "semantic-release"
   },
   "author": "Team Fraxes",
   "repository": {
     "type": "git",
     "url": "git://github.com/solarflare045/intolerable-style-guide.git"
   },
-  "main": "./index.js",
+  "engines": {
+    "node": ">=18.18",
+    "npm": ">=8.3"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "license": "ISC",
   "files": [
-    "index.js",
-    "jest.js",
-    "react.js",
-    "mild.js",
-    "prettier.json",
-    "*.md"
+    "*.md",
+    "dist/**"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.9.1",
-    "@typescript-eslint/parser": "^5.9.1",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^16.1.0",
-    "eslint-config-prettier": "^8.3.0",
+    "@eslint/js": "^9.21.0",
+    "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jest": "^25.3.4",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-security-node": "^1.1.0",
-    "eslint-plugin-sonarjs": "^0.11.0",
-    "eslint-plugin-unicorn": "^40.0.0",
-    "prettier": "^2.8.8",
-    "semver": "^7.5.2"
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-sonarjs": "^3.0.2",
+    "eslint-plugin-unicorn": "^56.0.0",
+    "prettier": "^3.5.2",
+    "semver": "^7.7.1",
+    "typescript-eslint": "^8.25.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.7.2",
-    "@commitlint/config-conventional": "^13.1.0",
-    "eslint": "^7.32.0",
-    "eslint-find-rules": "^4.1.0",
-    "husky": "^7.0.2",
-    "standard-version": "^9.3.1",
-    "typescript": "^4.5.2"
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "@types/eslint": "^9.6.1",
+    "@types/semver": "^7.5.8",
+    "eslint": "^9.21.0",
+    "husky": "^9.1.7",
+    "semantic-release": "^24.2.3",
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "eslint": ">=7.28.0",
+    "eslint": "^9.21.0",
     "typescript": "*"
   }
 }
