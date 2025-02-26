@@ -1,7 +1,11 @@
-const { ISG } = require('eslint-config-intolerable-style-guide');
+import { ISG } from 'eslint-config-intolerable-style-guide';
 
 // This file is used for internal testing only.
-module.exports = [
+export default [
+  {
+    ignores: ['eslint.config.mjs'],
+  },
+
   ...ISG,
 
   {
