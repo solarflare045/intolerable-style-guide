@@ -59,6 +59,10 @@ export default tseslint.config({
         trailingUnderscore: 'allow',
       },
       {
+        selector: 'function',
+        format: ['camelCase', 'PascalCase'],
+      },
+      {
         selector: 'typeLike',
         format: ['PascalCase'],
       },
