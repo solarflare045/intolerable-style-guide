@@ -67,6 +67,10 @@ export default tseslint.config({
         format: ['PascalCase'],
       },
       {
+        selector: 'enumMember',
+        format: ['camelCase', 'PascalCase'],
+      },
+      {
         selector: ['objectLiteralProperty', 'typeProperty'],
         format: null,
       },
