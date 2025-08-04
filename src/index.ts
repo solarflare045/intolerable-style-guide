@@ -12,13 +12,14 @@ export const ISG = tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
 
+  prettierPluginConfig,
+
   ...eslintRules,
   ...importRules,
   ...typescriptEslintRules,
   ...unicornRules,
   ...sonarjsRules,
 
-  prettierPluginConfig,
   {
     rules: {
       'prettier/prettier': [
