@@ -16,7 +16,6 @@ export default tseslint.config({
     'sonarjs/no-gratuitous-expressions': 'error',
     'sonarjs/no-identical-expressions': 'error',
     'sonarjs/no-nested-template-literals': 'error',
-    'sonarjs/no-one-iteration-loop': 'error',
     'sonarjs/no-redundant-boolean': 'error',
     'sonarjs/no-same-line-conditional': 'error',
     'sonarjs/prefer-immediate-return': 'error',
