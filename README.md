@@ -17,7 +17,7 @@ You can configure ESLint to use the Intolerable Style Guide by adding the follow
 ```javascript
 import { ISG } from 'eslint-config-intolerable-style-guide';
 
-default export [
+export default [
   {
     ignores: ['eslint.config.mjs'],
   },
