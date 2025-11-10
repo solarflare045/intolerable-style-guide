@@ -12,7 +12,7 @@
   "author": "Team Fraxes",
   "repository": {
     "type": "git",
-    "url": "git://github.com/solarflare045/intolerable-style-guide.git"
+    "url": "git@github.com:I2-AU/intolerable-style-guide.git"
   },
   "engines": {
     "node": ">=18.18",
@@ -38,8 +38,8 @@
     "typescript-eslint": "^8.25.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.7.1",
-    "@commitlint/config-conventional": "^19.7.1",
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@types/eslint": "^9.6.1",
     "@types/semver": "^7.5.8",
     "eslint": "^9.21.0",
