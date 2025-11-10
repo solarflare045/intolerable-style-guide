@@ -1,2 +1,5 @@
 extends:
   - '@commitlint/config-conventional'
+
+rules:
+  body-max-line-length: [0] # This is to let Dependabot pass commitlint checks
