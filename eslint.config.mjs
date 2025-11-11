@@ -1,7 +1,11 @@
-const { ISG } = require('./dist');
+import { ISG } from './dist/index.js';
 
 // This file is used for internal testing only.
-module.exports = [
+export default [
+  {
+    ignores: ['eslint.config.mjs'],
+  },
+
   ...ISG,
 
   {

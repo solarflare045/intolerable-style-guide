@@ -15,7 +15,7 @@
     "url": "git://github.com/solarflare045/intolerable-style-guide.git"
   },
   "engines": {
-    "node": ">=18.18",
+    "node": ">=20.10",
     "npm": ">=8.3"
   },
   "main": "./dist/index.js",
@@ -32,14 +32,14 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-sonarjs": "^3.0.2",
-    "eslint-plugin-unicorn": "^56.0.0",
+    "eslint-plugin-unicorn": "^62.0.0",
     "prettier": "^3.5.2",
     "semver": "^7.7.1",
     "typescript-eslint": "^8.25.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.7.1",
-    "@commitlint/config-conventional": "^19.7.1",
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@types/eslint": "^9.6.1",
     "@types/semver": "^7.5.8",
     "eslint": "^9.21.0",

@@ -59,8 +59,16 @@ export default tseslint.config({
         trailingUnderscore: 'allow',
       },
       {
+        selector: 'function',
+        format: ['camelCase', 'PascalCase'],
+      },
+      {
         selector: 'typeLike',
         format: ['PascalCase'],
+      },
+      {
+        selector: 'enumMember',
+        format: ['camelCase', 'PascalCase'],
       },
       {
         selector: ['objectLiteralProperty', 'typeProperty'],
@@ -232,7 +240,12 @@ export default tseslint.config({
         allowAny: false,
       },
     ],
-    '@typescript-eslint/switch-exhaustiveness-check': 'error',
+    '@typescript-eslint/switch-exhaustiveness-check': [
+      'error',
+      {
+        considerDefaultExhaustiveForUnions: true,
+      },
+    ],
     '@typescript-eslint/unbound-method': 'off',
     '@typescript-eslint/use-unknown-in-catch-callback-variable': 'error',
   },
