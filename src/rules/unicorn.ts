@@ -28,6 +28,7 @@ export default tseslint.config({
     'unicorn/no-lonely-if': 'error',
     'unicorn/no-negation-in-equality-check': 'error',
     'unicorn/no-thenable': 'error',
+    'unicorn/throw-new-error': 'error',
     'unicorn/no-unnecessary-array-splice-count': 'error',
     'unicorn/no-useless-error-capture-stack-trace': 'error',
     'unicorn/no-useless-fallback-in-spread': 'error',
