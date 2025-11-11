@@ -28,7 +28,6 @@ export default tseslint.config({
     'unicorn/no-lonely-if': 'error',
     'unicorn/no-negation-in-equality-check': 'error',
     'unicorn/no-thenable': 'error',
-    'unicorn/throw-new-error': 'error',
     'unicorn/no-unnecessary-array-splice-count': 'error',
     'unicorn/no-useless-error-capture-stack-trace': 'error',
     'unicorn/no-useless-fallback-in-spread': 'error',
@@ -45,5 +44,6 @@ export default tseslint.config({
     'unicorn/prefer-optional-catch-binding': 'error',
     'unicorn/prefer-ternary': 'error',
     'unicorn/require-module-specifiers': 'error',
+    'unicorn/throw-new-error': 'error',
   },
 });
