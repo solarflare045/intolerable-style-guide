@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import prettierPluginConfig from 'eslint-plugin-prettier/recommended';
 import tseslint from 'typescript-eslint';
 
@@ -8,7 +9,7 @@ import sonarjsRules from './rules/sonar';
 import typescriptEslintRules from './rules/typescript-eslint';
 import unicornRules from './rules/unicorn';
 
-export const ISG = tseslint.config(
+export const ISG = defineConfig(
   js.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
 
