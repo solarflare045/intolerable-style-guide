@@ -15,14 +15,15 @@ npm install -D eslint-config-intolerable-style-guide eslint@9
 
 You can configure ESLint to use the Intolerable Style Guide by adding the following `eslint.config.mjs` to your project:
 ```javascript
+import { defineConfig } from 'eslint/config';
 import { ISG } from 'eslint-config-intolerable-style-guide';
 
-export default [
+export default defineConfig([
   {
     ignores: ['eslint.config.mjs'],
   },
 
-  ...ISG,
+  ISG,
 
   {
     languageOptions: {
@@ -31,7 +32,7 @@ export default [
       },
     },
   },
-];
+]);
 ```
 
 It is also recommended to manually add a linting script to your `package.json`, which should look like this:

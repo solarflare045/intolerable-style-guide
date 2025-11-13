@@ -1,12 +1,13 @@
+import { defineConfig } from 'eslint/config';
 import { ISG } from 'eslint-config-intolerable-style-guide';
 
 // This file is used for internal testing only.
-export default [
+export default defineConfig([
   {
     ignores: ['eslint.config.mjs'],
   },
 
-  ...ISG,
+  ISG,
 
   {
     languageOptions: {
@@ -15,4 +16,4 @@ export default [
       },
     },
   },
-];
+]);

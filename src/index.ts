@@ -11,15 +11,15 @@ import unicornRules from './rules/unicorn';
 
 export const ISG = defineConfig(
   js.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
+  tseslint.configs.recommendedTypeChecked,
 
   prettierPluginConfig,
 
-  ...eslintRules,
-  ...importRules,
-  ...typescriptEslintRules,
-  ...unicornRules,
-  ...sonarjsRules,
+  eslintRules,
+  importRules,
+  typescriptEslintRules,
+  unicornRules,
+  sonarjsRules,
 
   {
     rules: {
