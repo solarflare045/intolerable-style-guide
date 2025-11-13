@@ -7,6 +7,7 @@
     "lint": "eslint -c ./eslint.config.mjs ./src/good-file.ts"
   },
   "dependencies": {
+    "eslint": "^9.36.0",
     "eslint-config-intolerable-style-guide": ".."
   },
   "author": "",
