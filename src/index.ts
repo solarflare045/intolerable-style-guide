@@ -1,4 +1,5 @@
 import js from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import prettierPluginConfig from 'eslint-plugin-prettier/recommended';
 import tseslint from 'typescript-eslint';
 
@@ -8,17 +9,17 @@ import sonarjsRules from './rules/sonar';
 import typescriptEslintRules from './rules/typescript-eslint';
 import unicornRules from './rules/unicorn';
 
-export const ISG = tseslint.config(
+export const ISG = defineConfig(
   js.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
+  tseslint.configs.recommendedTypeChecked,
 
   prettierPluginConfig,
 
-  ...eslintRules,
-  ...importRules,
-  ...typescriptEslintRules,
-  ...unicornRules,
-  ...sonarjsRules,
+  eslintRules,
+  importRules,
+  typescriptEslintRules,
+  unicornRules,
+  sonarjsRules,
 
   {
     rules: {
@@ -51,7 +52,7 @@ export const ISG = tseslint.config(
 
   // TYPESCRIPT TEST FILE OVERRIDES
   {
-    files: ['**/*.test.*', '**/*.spec.*', '**/*.e2e-spec.*', '**/*.cy.*'],
+    files: ['**/*.test.*', '**/*.spec.*', '**/*.e2e-spec.*', '**/*.cy.*', '**/*.mock.*'],
     rules: {
       '@typescript-eslint/init-declarations': 'off', // in tests it is handy to have a variable initialized later in a beforeEach block.
       '@typescript-eslint/no-magic-numbers': 'off', // magic number are fun and good in tests

@@ -1,7 +1,7 @@
+import { defineConfig } from 'eslint/config';
 import sonarjs from 'eslint-plugin-sonarjs';
-import tseslint from 'typescript-eslint';
 
-export default tseslint.config({
+export default defineConfig({
   plugins: {
     sonarjs,
   },
