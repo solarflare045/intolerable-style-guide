@@ -1,11 +1,10 @@
 import { defineConfig } from 'eslint/config';
-import * as importPlugin from 'eslint-plugin-import';
+import importPlugin from 'eslint-plugin-import-x';
 
 import { tsiif } from '../helpers/iif';
 
 export default defineConfig({
   plugins: {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- No types available.
     import: importPlugin,
   },
   rules: {

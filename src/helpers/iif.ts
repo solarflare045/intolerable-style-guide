@@ -2,7 +2,7 @@ import { satisfies as versionSatisfies } from 'semver';
 
 function getTypescriptVersion(): string | null {
   try {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-var-requires
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const typescript = require('typescript');
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access
     return typescript.version;
