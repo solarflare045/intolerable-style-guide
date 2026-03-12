@@ -12,7 +12,7 @@ export default defineConfig({
       },
     ],
     '@typescript-eslint/await-thenable': 'error',
-    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/ban-ts-comment': 'error',
     '@typescript-eslint/ban-tslint-comment': 'error',
     '@typescript-eslint/class-literal-property-style': 'off',
     '@typescript-eslint/consistent-generic-constructors': 'off',
@@ -89,7 +89,6 @@ export default defineConfig({
       },
     ],
     'no-empty-function': 'off',
-    '@typescript-eslint/no-empty-interface': 'error',
     '@typescript-eslint/no-empty-object-type': 'error',
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-extra-non-null-assertion': 'error',
@@ -113,8 +112,6 @@ export default defineConfig({
     '@typescript-eslint/no-invalid-void-type': 'error',
     '@typescript-eslint/no-loop-func': 'error',
     'no-loop-func': 'off',
-    '@typescript-eslint/no-loss-of-precision': 'error',
-    'no-loss-of-precision': 'off',
     '@typescript-eslint/no-magic-numbers': [
       'error',
       {
@@ -175,7 +172,6 @@ export default defineConfig({
     '@typescript-eslint/no-useless-constructor': 'error',
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-empty-export': 'error',
-    '@typescript-eslint/no-var-requires': 'error',
     '@typescript-eslint/no-wrapper-object-types': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'off',
     '@typescript-eslint/only-throw-error': 'error',
@@ -206,7 +202,6 @@ export default defineConfig({
     '@typescript-eslint/prefer-regexp-exec': 'off',
     '@typescript-eslint/prefer-return-this-type': 'error',
     '@typescript-eslint/prefer-string-starts-ends-with': 'error',
-    '@typescript-eslint/prefer-ts-expect-error': 'error',
     '@typescript-eslint/promise-function-async': 'error',
     '@typescript-eslint/require-array-sort-compare': 'off',
     '@typescript-eslint/require-await': 'off',
@@ -226,7 +221,6 @@ export default defineConfig({
     ],
     '@typescript-eslint/return-await': ['error', 'in-try-catch'],
     'no-return-await': 'off',
-    '@typescript-eslint/sort-type-constituents': 'error',
     '@typescript-eslint/strict-boolean-expressions': [
       'warn',
       {
