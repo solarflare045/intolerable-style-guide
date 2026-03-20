@@ -1,8 +1,6 @@
 import { defineConfig } from 'eslint/config';
 import importPlugin from 'eslint-plugin-import-x';
 
-import { tsiif } from '../helpers/iif';
-
 export default defineConfig({
   plugins: {
     import: importPlugin,
@@ -23,7 +21,7 @@ export default defineConfig({
     ],
     'import/newline-after-import': 'error',
     'import/no-absolute-path': 'error',
-    'import/no-cycle': tsiif('<3.8', 'off', 'error'),
+    'import/no-cycle': 'error',
     'import/no-deprecated': 'warn',
     'import/no-mutable-exports': 'error',
     'import/no-self-import': 'error',

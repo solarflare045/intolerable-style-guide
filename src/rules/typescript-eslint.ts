@@ -1,7 +1,5 @@
 import { defineConfig } from 'eslint/config';
 
-import { tsiif } from '../helpers/iif';
-
 export default defineConfig({
   rules: {
     '@typescript-eslint/adjacent-overload-signatures': 'error',
@@ -21,15 +19,15 @@ export default defineConfig({
     'consistent-return': 'off',
     '@typescript-eslint/consistent-type-assertions': 'off',
     '@typescript-eslint/consistent-type-definitions': 'off',
-    '@typescript-eslint/consistent-type-exports': tsiif('<3.8', 'off', ['error']),
-    '@typescript-eslint/consistent-type-imports': tsiif('<3.8', 'off', [
+    '@typescript-eslint/consistent-type-exports': ['error'],
+    '@typescript-eslint/consistent-type-imports': [
       'error',
       {
         disallowTypeAnnotations: true,
         prefer: 'type-imports',
         fixStyle: 'separate-type-imports',
       },
-    ]),
+    ],
     '@typescript-eslint/default-param-last': 'error',
     'default-param-last': 'off',
     '@typescript-eslint/dot-notation': 'error',
