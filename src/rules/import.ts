@@ -1,11 +1,8 @@
 import { defineConfig } from 'eslint/config';
-import * as importPlugin from 'eslint-plugin-import';
-
-import { tsiif } from '../helpers/iif';
+import importPlugin from 'eslint-plugin-import-x';
 
 export default defineConfig({
   plugins: {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- No types available.
     import: importPlugin,
   },
   rules: {
@@ -24,7 +21,7 @@ export default defineConfig({
     ],
     'import/newline-after-import': 'error',
     'import/no-absolute-path': 'error',
-    'import/no-cycle': tsiif('<3.8', 'off', 'error'),
+    'import/no-cycle': 'error',
     'import/no-deprecated': 'warn',
     'import/no-mutable-exports': 'error',
     'import/no-self-import': 'error',
